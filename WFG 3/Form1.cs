@@ -614,7 +614,7 @@ namespace WFG_3
         {
             ((Button)sender).BackColor = Color.FromArgb(102, 102, 102);
 
-            using (var soundPlayer = new SoundPlayer(@"C:\Проект\ЦЫК.wav"))
+            using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/ЦЫК.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
 
@@ -701,7 +701,7 @@ namespace WFG_3
         {
             enter.Visible = false;
 
-            using (var soundPlayer = new SoundPlayer(@"C:\Проект\backgroundIntro_var3.wav"))
+            using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/backgroundIntro_var3.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
                 soundPlayer.PlayLooping();
