@@ -627,7 +627,7 @@ namespace WFG_3
         private void radiobutton_MouseEnter(object sender, EventArgs e)
         {
 
-            using (var soundPlayer = new SoundPlayer(@"C:\Проект\ЦЫК.wav"))
+            using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/ЦЫК.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
 
