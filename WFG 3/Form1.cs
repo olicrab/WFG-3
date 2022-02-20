@@ -241,6 +241,7 @@ namespace WFG_3
             public Skill[] skills;
             public Slot slot;
             public Class Class;
+            public int LVL;
 
             public Item()
             {
@@ -250,14 +251,16 @@ namespace WFG_3
                 skill_count = 0;
                 skills = null;
                 Class = Class.None;
+                LVL = 0;
             }
-            public Item(string name0, string img_path0, Slot slot0, Class Class0)
+            public Item(string name0, string img_path0, Slot slot0, Class Class0, int LVL0)
             {
                 name = name0;
                 img_path = img_path0;
                 img = Image.FromFile(img_path0);
                 slot = slot0;
                 Class = Class0;
+                LVL = LVL0;
             }
 
             public void addSkill(Skill S)
@@ -535,8 +538,8 @@ namespace WFG_3
         Skill FireBallPeriod = new DmgDebuffSkill("FireBall", "", 7, 55, "Fire your enemy", 4, 2);
         Skill Bleeding = new DmgDebuffSkill("Bleeding", "", 5, 30, "Causes bleeding", 2, 10);
         Skill Axe_Attack = new DamageSkill("Axe_Attack", "", 5, 30, "Axe Attack", 50);
-        Skill Bubble_shield = new BubbleSkill("Bubble_shield", "",10, 30, "imposes invulnerability", 2);
-        Skill Mage_invisibility = new BubbleSkill("Mage_invisibility", "", 8, 20, "makes the hero invisible", 1);
+        Skill Bubble_shield = new BubbleSkill("Bubble_shield", "", 10, 30, "Imposes invulnerability", 2);
+        Skill Mage_invisibility = new BubbleSkill("Mage_invisibility", "", 8, 20, "Makes the hero invisible", 1);
 
 
 
@@ -544,16 +547,19 @@ namespace WFG_3
 
 
         //ДЕФОЛТНЫЕ ПРЕДМЕТЫ
-        static Item Acorn = new Item("Acorn", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_AMR_LVL1_Acorn.png", Slot.Armor, Class.None);
-        static Item Sword = new Item("Sword", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_LH_LVL1_Sword.png", Slot.LeftHand, Class.Warrior);
-        static Item Shield = new Item("Shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_Shield.png", Slot.RightHand, Class.Warrior);
-        static Item Bow = new Item("Bow", "C:/Проект/WFG 3 — копия/WFG 3/Resources/R_LH_LVL1_Bow.png", Slot.LeftHand, Class.Ranger);
-        static Item PoisonedArrow = new Item("PoisonedArrow", "C:/Проект/WFG 3 — копия/WFG 3/Resources/R_RH_LVL1_PoisonedArrow.png", Slot.RightHand, Class.Ranger);
-        static Item Wand = new Item("Wand", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_LH_LVL1_Wand.png", Slot.LeftHand, Class.Mage);
-        static Item FireBall = new Item("FireBall", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL1_FireBall.png", Slot.RightHand, Class.Mage);
-        static Item Axe = new Item("Giant Axe", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_AXE.png", Slot.RightHand, Class.Warrior);
-        static Item Sacred_Shield = new Item("The sacred shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL2_SacredShield.png", Slot.RightHand, Class.Warrior);
-        static Item invisibility_ring = new Item("Invisibility ring", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL2_InvizRing.png", Slot.RightHand, Class.None);
+        static Item Acorn = new Item("Acorn", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_AMR_LVL1_Acorn.png", Slot.Armor, Class.None, 1);
+        static Item Sword = new Item("Sword", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_LH_LVL1_Sword.png", Slot.LeftHand, Class.Warrior, 1);
+        static Item Shield = new Item("Shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_Shield.png", Slot.RightHand, Class.Warrior, 1);
+        static Item Bow = new Item("Bow", "C:/Проект/WFG 3 — копия/WFG 3/Resources/R_LH_LVL1_Bow.png", Slot.LeftHand, Class.Ranger, 1);
+        static Item PoisonedArrow = new Item("PoisonedArrow", "C:/Проект/WFG 3 — копия/WFG 3/Resources/R_RH_LVL1_PoisonedArrow.png", Slot.RightHand, Class.Ranger, 1);
+        static Item Wand = new Item("Wand", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_LH_LVL1_Wand.png", Slot.LeftHand, Class.Mage, 1);
+        static Item FireBall = new Item("FireBall", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL1_FireBall.png", Slot.RightHand, Class.Mage, 1);
+        
+
+        //1 LVL
+        static Item Axe = new Item("Giant Axe", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_AXE.png", Slot.RightHand, Class.Warrior, 1);
+        static Item Sacred_Shield = new Item("The sacred shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL2_SacredShield.png", Slot.RightHand, Class.Warrior, 2);
+        static Item invisibility_ring = new Item("Invisibility ring", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL2_InvizRing.png", Slot.RightHand, Class.None, 2);
 
 
 
@@ -585,6 +591,7 @@ namespace WFG_3
             Axe.addSkill(Bleeding);
             Axe.addSkill(Axe_Attack);
             Sacred_Shield.addSkill(Bubble_shield);
+            invisibility_ring.addSkill(Mage_invisibility);
 
             MAINMENU.addElement(label1);
             MAINMENU.addElement(panel1);
@@ -625,12 +632,18 @@ namespace WFG_3
             using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/ЦЫК.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
-
             }
         }
         private void button_MouseLeave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.FromArgb(187, 187, 187);
+        }
+        private void button_MouseDown(object sender, MouseEventArgs e)
+        {
+            using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/buttonclick.wav"))
+            {
+                soundPlayer.Play(); // can also use soundPlayer.PlaySync()
+            }
         }
         private void radiobutton_MouseEnter(object sender, EventArgs e)
         {
@@ -638,7 +651,6 @@ namespace WFG_3
             using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/ЦЫК.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
-
             }
         }
         private void radiobutton_MouseLeave(object sender, EventArgs e)
@@ -756,6 +768,11 @@ namespace WFG_3
         }
 
         public void afterbattle_process()
+        {
+
+        }
+
+        private void button_MouseDown(object sender, KeyPressEventArgs e)
         {
 
         }
