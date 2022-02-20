@@ -173,5 +173,11 @@
   <ItemGroup>
     <None Include="Resources\R_RH_LVL1_PoisonedArrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundIntro_var3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЦЫК.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
