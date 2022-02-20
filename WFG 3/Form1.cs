@@ -743,7 +743,6 @@ namespace WFG_3
 
 
 
-                WARMENU.Display();
 
             }
 
@@ -752,7 +751,11 @@ namespace WFG_3
 
         public void battle_process()
         {
-
+            int i = 0;
+            while (i < 100)
+            {
+                i++;
+            }
         }
 
         public void afterbattle_process()
