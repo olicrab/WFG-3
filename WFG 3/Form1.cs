@@ -19,6 +19,8 @@ namespace WFG_3
             LeftHand,
             Armor,
             RightHand,
+            HPPotion,
+            MPPotion,
             None,
         }
         public enum Class
@@ -288,7 +290,23 @@ namespace WFG_3
             }
         }
 
+        public class Potion:Item
+        {
+            public double heal_HP;
+            public double heal_MP;
 
+            public Potion()
+            {
+                heal_HP = 0;
+                heal_MP = 0;
+            }
+
+            public Potion(string name0, string img_path0, Slot slot0, Class Class0, int LVL0, double heal_HP0, double heal_MP0):base(name0, img_path0, slot0, Class0, LVL0)
+            {
+                heal_HP = heal_HP0;
+                heal_MP = heal_MP0;
+            }
+        }
 
 
         public class Race
@@ -374,11 +392,18 @@ namespace WFG_3
             public Item LeftHand;
             public Item RightHand;
             public Item Armor;
+            public int HealPotionCounter;
+            public Potion HealPotion;
+            public int ManaPotionCounter;
+            public Potion ManaPotion;
+            
 
             public Hero()
             {
                 Class = Class.None;
                 icon = null;
+                HealPotionCounter = 0;
+                ManaPotionCounter = 0;
             }
 
             public Hero(int LVL0, string name0, Race race0, Class Class0) : base(LVL0, name0, race0)
@@ -463,14 +488,21 @@ namespace WFG_3
         {
             public Class Class;
             public Image icon;
+            public Item LeftHand;
+            public Item Armor;
+            public Item RightHand;
 
             public Mob()
             {
                 Class = Class.None;
                 icon = null;
-            }
+                LeftHand = null;
+                Armor = null;
+                RightHand = null;
 
-            public Mob(int LVL0, string name0, Race race0, Class Class0) : base(LVL0, name0, race0)
+        }
+
+        public Mob(int LVL0, string name0, Race race0, Class Class0, Item LeftHand0, Item Armor0, Item RightHand0) : base(LVL0, name0, race0)
             {
                 Class = Class0;
                 if (race.name == "Ogre")
@@ -518,6 +550,9 @@ namespace WFG_3
                         icon = Image.FromFile("C:/Проект/WFG 3 — копия/WFG 3/Resources/ElfMageBad.png");
                     }
                 }
+                LeftHand = LeftHand0;
+                Armor = Armor0;
+                RightHand = RightHand0;
             }
         }
 
@@ -564,7 +599,7 @@ namespace WFG_3
 
 
         //НЕДОМОБЫ
-        Mob A = new Mob(1, "Urulgharl", Elf, Class.Warrior);
+        //Mob A = new Mob(1, "Urulgharl", Elf, Class.Warrior);
 
 
         Hero HERO = new Hero();
@@ -573,6 +608,10 @@ namespace WFG_3
         Page CREATEHEROMENU = new Page();
         Page ENTERMENU = new Page();
         Page WARMENU = new Page();
+
+
+        public int cur_floor;
+        public int cur_room;
 
 
         //СДЕЛАТЬ ИНИЦИАЛИЗАЦИЮ ПРЕДМЕТОВ СКИЛАМИ (СКИЛЫ И ПРЕДМЕТЫ СОЗДАЮТСЯ СВЕРХУ, НО ПРЕДМЕТЫ БЕЗ СКИЛОВ)
@@ -656,6 +695,14 @@ namespace WFG_3
         private void radiobutton_MouseLeave(object sender, EventArgs e)
         {
         }
+        private void namebox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/buttonclick.wav"))
+            {
+                soundPlayer.Play(); // can also use soundPlayer.PlaySync()
+            }
+        }
+
 
         private void exit_Click(object sender, EventArgs e)
         {
@@ -758,22 +805,7 @@ namespace WFG_3
             //herohp_Bar.Value = Convert.ToInt32(A.HP);
             //WARMENU.Display();
 
-
-
-        }
-
-        public void battle_process()
-        {
-          
-        }
-
-        public void afterbattle_process()
-        {
-
-        }
-
-        private void button_MouseDown(object sender, KeyPressEventArgs e)
-        {
+            
 
         }
     }

@@ -213,8 +213,7 @@ namespace WFG_3
             this.namebox.Name = "namebox";
             this.namebox.Size = new System.Drawing.Size(189, 25);
             this.namebox.TabIndex = 0;
-            this.namebox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_MouseDown);
-            this.namebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
+            this.namebox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.namebox_KeyPress);
             // 
             // raceChoice
             // 
@@ -416,9 +415,6 @@ namespace WFG_3
             this.mppotion_Button.Size = new System.Drawing.Size(64, 64);
             this.mppotion_Button.TabIndex = 10;
             this.mppotion_Button.UseVisualStyleBackColor = true;
-            this.mppotion_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            this.mppotion_Button.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-            this.mppotion_Button.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // hppotion_Panel
             // 
@@ -436,9 +432,6 @@ namespace WFG_3
             this.hppotion_Button.Size = new System.Drawing.Size(64, 64);
             this.hppotion_Button.TabIndex = 9;
             this.hppotion_Button.UseVisualStyleBackColor = true;
-            this.hppotion_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            this.hppotion_Button.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-            this.hppotion_Button.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // skill2_Panel
             // 
@@ -456,9 +449,6 @@ namespace WFG_3
             this.skill2_Button.Size = new System.Drawing.Size(64, 64);
             this.skill2_Button.TabIndex = 7;
             this.skill2_Button.UseVisualStyleBackColor = true;
-            this.skill2_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            this.skill2_Button.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-            this.skill2_Button.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // skill1_Panel
             // 
@@ -476,9 +466,6 @@ namespace WFG_3
             this.skill1_Button.Size = new System.Drawing.Size(64, 64);
             this.skill1_Button.TabIndex = 6;
             this.skill1_Button.UseVisualStyleBackColor = true;
-            this.skill1_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            this.skill1_Button.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-            this.skill1_Button.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // skill3_Panel
             // 
@@ -496,9 +483,6 @@ namespace WFG_3
             this.skill3_Button.Size = new System.Drawing.Size(64, 64);
             this.skill3_Button.TabIndex = 8;
             this.skill3_Button.UseVisualStyleBackColor = true;
-            this.skill3_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            this.skill3_Button.MouseEnter += new System.EventHandler(this.button_MouseEnter);
-            this.skill3_Button.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // event_label
             // 
