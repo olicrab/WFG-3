@@ -533,6 +533,10 @@ namespace WFG_3
         Skill Poisoned_Arrow = new DmgDebuffSkill("Poisoned_Arrow", "", 5, 25, "Posion your enemy", 3, 10);
         Skill FireBallInst = new DamageSkill("FireBall", "", 7, 55, "Damage your enemy", 40);
         Skill FireBallPeriod = new DmgDebuffSkill("FireBall", "", 7, 55, "Fire your enemy", 4, 2);
+        Skill Bleeding = new DmgDebuffSkill("Bleeding", "", 5, 30, "Causes bleeding", 2, 10);
+        Skill Axe_Attack = new DamageSkill("Axe_Attack", "", 5, 30, "Axe Attack", 50);
+        Skill Bubble_shield = new BubbleSkill("Bubble_shield", "",10, 30, "imposes invulnerability", 2);
+        Skill Mage_invisibility = new BubbleSkill("Mage_invisibility", "", 8, 20, "makes the hero invisible", 1);
 
 
 
@@ -547,8 +551,9 @@ namespace WFG_3
         static Item PoisonedArrow = new Item("PoisonedArrow", "C:/Проект/WFG 3 — копия/WFG 3/Resources/R_RH_LVL1_PoisonedArrow.png", Slot.RightHand, Class.Ranger);
         static Item Wand = new Item("Wand", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_LH_LVL1_Wand.png", Slot.LeftHand, Class.Mage);
         static Item FireBall = new Item("FireBall", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL1_FireBall.png", Slot.RightHand, Class.Mage);
-
-
+        static Item Axe = new Item("Giant Axe", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_AXE.png", Slot.RightHand, Class.Warrior);
+        static Item Sacred_Shield = new Item("The sacred shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL2_SacredShield.png", Slot.RightHand, Class.Warrior);
+        static Item invisibility_ring = new Item("Invisibility ring", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL2_InvizRing.png", Slot.RightHand, Class.None);
 
 
 
@@ -577,6 +582,9 @@ namespace WFG_3
             Wand.addSkill(Wand_Attack);
             FireBall.addSkill(FireBallInst);
             FireBall.addSkill(FireBallPeriod);
+            Axe.addSkill(Bleeding);
+            Axe.addSkill(Axe_Attack);
+            Sacred_Shield.addSkill(Bubble_shield);
 
             MAINMENU.addElement(label1);
             MAINMENU.addElement(panel1);
@@ -703,7 +711,7 @@ namespace WFG_3
 
             using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/backgroundIntro_var3.wav"))
             {
-                soundPlayer.Play(); // can also use soundPlayer.PlaySync()
+                soundPlayer.Play(); 
                 soundPlayer.PlayLooping();
             }
 
@@ -738,24 +746,13 @@ namespace WFG_3
             //herohp_Bar.Value = Convert.ToInt32(A.HP);
             //WARMENU.Display();
 
-            while (true)
-            {
-
-
-
-
-            }
 
 
         }
 
         public void battle_process()
         {
-            int i = 0;
-            while (i < 100)
-            {
-                i++;
-            }
+          
         }
 
         public void afterbattle_process()
