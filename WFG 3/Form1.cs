@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace WFG_3
@@ -160,77 +160,6 @@ namespace WFG_3
             {
                 damage = damage0;
             }
-        }
-
-        public class BubbleSkill : Skill
-        {
-            public int duration;
-
-            public BubbleSkill()
-            {
-                duration = 0;
-            }
-
-            public BubbleSkill(string name0, string event_content0, int cooldown0, double cost0, string info0, int duration0) : base(name0, event_content0, cooldown0, cost0, info0)
-            {
-                duration = duration0;
-            }
-        }
-
-        public class DebuffSkill : Skill
-        {
-            public int duration;
-
-            public DebuffSkill()
-            {
-                duration = 0;
-            }
-
-            public DebuffSkill(string name0, string event_content0, int cooldown0, double cost0, string info0, int duration0) : base(name0, event_content0, cooldown0, cost0, info0)
-            {
-                duration = duration0;
-            }
-        }
-
-        public class DmgDebuffSkill : DebuffSkill
-        {
-            public double damage_per_turn;
-
-            public DmgDebuffSkill()
-            {
-                damage_per_turn = 0;
-            }
-
-            public DmgDebuffSkill(string name0, string event_content0, int cooldown0, double cost0, string info0, int duration0, double damage_per_turn0) : base(name0, event_content0, cooldown0, cost0, info0, duration0)
-            {
-                damage_per_turn = damage_per_turn0;
-            }
-        }
-
-        public class ManaBurnDebuffSkill : DebuffSkill
-        {
-            public double manaburn_per_turn;
-            public ManaBurnDebuffSkill()
-            {
-                manaburn_per_turn = 0;
-            }
-
-            public ManaBurnDebuffSkill(string name0, string event_content0, int cooldown0, double cost0, string info0, int duration0, double manaburn_per_turn0) : base(name0, event_content0, cooldown0, cost0, info0, duration0)
-            {
-                manaburn_per_turn = manaburn_per_turn0;
-            }
-        }
-
-        public class StunDebuffSkill : DebuffSkill
-        {
-            public StunDebuffSkill()
-            {
-            }
-
-            public StunDebuffSkill(string name0, string event_content0, int cooldown0, double cost0, string info0, int duration0) : base(name0, event_content0, cooldown0, cost0, info0, duration0)
-            {
-            }
-
         }
 
         public class HealSkill : Skill
@@ -578,14 +507,6 @@ namespace WFG_3
             }
         }
 
-        public class BattleEvent
-        {
-            static public bool IsChanged;
-            static public Item ItemPressed;
-
-        }
-
-
         //РАССЫ
         static Race Ogre = new Race("Ogre");
         static Race Human = new Race("Human");
@@ -597,14 +518,9 @@ namespace WFG_3
         Skill Bow_Attack = new DamageSkill("Bow_Attack", "", 0, 0, "Weak Attack", 5);
         Skill Wand_Attack = new DamageSkill("Wand_Attack", "", 0, 0, "Weak Attack", 5);
         Skill Acorn_ROFL = new DamageSkill("Acorn_Attack", "", 0, 3, "The weakest attack in the Game", 1);
-        Skill Shield_Attack = new StunDebuffSkill("Shield_Attack", "", 10, 20, "Stun your enemy", 2);
-        Skill Poisoned_Arrow = new DmgDebuffSkill("Poisoned_Arrow", "", 5, 25, "Posion your enemy", 3, 10);
-        Skill FireBallInst = new DamageSkill("FireBall", "", 7, 55, "Damage your enemy", 40);
-        Skill FireBallPeriod = new DmgDebuffSkill("FireBall", "", 7, 55, "Fire your enemy", 4, 2);
-        Skill Bleeding = new DmgDebuffSkill("Bleeding", "", 5, 30, "Causes bleeding", 2, 10);
-        Skill Axe_Attack = new DamageSkill("Axe_Attack", "", 5, 30, "Axe Attack", 50);
-        Skill Bubble_shield = new BubbleSkill("Bubble_shield", "", 10, 30, "Imposes invulnerability", 2);
-        Skill Mage_invisibility = new BubbleSkill("Mage_invisibility", "", 8, 20, "Makes the hero invisible", 1);
+        Skill Shield_Attack = new DamageSkill("Shield_Attack", "", 2, 20, "Attack your enemy by shield", 20);
+        Skill Poisoned_Arrow = new DamageSkill("Poisoned_Arrow", "", 5, 25, "Posion your enemy", 3);
+        Skill FireBall_Attack = new DamageSkill("FireBall", "", 7, 55, "Damage your enemy", 40);
         Skill Heal1 = new HealSkill("Heal", "", 3, 0, "Heal your hero", 50, 0);
         Skill Mana1 = new HealSkill("Heal", "", 3, 0, "Restore Mana", 0, 50);
 
@@ -626,21 +542,17 @@ namespace WFG_3
         static Item HealPotion = new Potion("Heal Potion", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_HPP_LVL1_HealPotion.png", Slot.HPPotion, Class.None, 1, 50, 0);
         static Item ManaPotion = new Potion("Heal Potion", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_MPP_LVL1_ManaPotion.png", Slot.MPPotion, Class.None, 1,  0, 50);
 
-        //1 LVL
-        static Item Axe = new Item("Giant Axe", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_AXE.png", Slot.RightHand, Class.Warrior, 1);
-
-        //2 LVL
-        static Item Sacred_Shield = new Item("The sacred shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL2_SacredShield.png", Slot.RightHand, Class.Warrior, 2);
-        static Item invisibility_ring = new Item("Invisibility ring", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL2_InvizRing.png", Slot.RightHand, Class.None, 2);
-
-
 
         //НЕДОМОБЫ
-        //Mob A = new Mob(1, "Urulgharl", Elf, Class.Warrior);
+        Mob A = new Mob(1, "Urulgharl", Elf, Class.Warrior, Sword, Acorn, Shield);
+        Mob B = new Mob(1, "PIZDA", Ogre, Class.Mage, Wand, Acorn, FireBall);
 
-        
+        public int turn = 0;
 
         Hero HERO0 = new Hero();
+
+        Hero hero = new Hero();
+        Mob enemy = new Mob();
 
         Page MAINMENU = new Page();
         Page CREATEHEROMENU = new Page();
@@ -664,12 +576,7 @@ namespace WFG_3
             Bow.addSkill(Bow_Attack);
             PoisonedArrow.addSkill(Poisoned_Arrow);
             Wand.addSkill(Wand_Attack);
-            FireBall.addSkill(FireBallInst);
-            FireBall.addSkill(FireBallPeriod);
-            Axe.addSkill(Bleeding);
-            Axe.addSkill(Axe_Attack);
-            Sacred_Shield.addSkill(Bubble_shield);
-            invisibility_ring.addSkill(Mage_invisibility);
+            FireBall.addSkill(FireBall_Attack);
             HealPotion.addSkill(Heal1);
             ManaPotion.addSkill(Mana1);
 
@@ -736,7 +643,7 @@ namespace WFG_3
         }
         private void radiobutton_MouseEnter(object sender, EventArgs e)
         {
-
+            ((RadioButton)sender).BackColor = Color.FromArgb(102, 102, 102);
             using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/ЦЫК.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
@@ -744,12 +651,42 @@ namespace WFG_3
         }
         private void radiobutton_MouseLeave(object sender, EventArgs e)
         {
+            ((RadioButton)sender).BackColor = Color.FromArgb(187, 187, 187);
         }
         private void namebox_KeyPress(object sender, KeyPressEventArgs e)
         {
             using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/buttonclick.wav"))
             {
                 soundPlayer.Play(); // can also use soundPlayer.PlaySync()
+            }
+        }
+
+
+        private void skillbutton_Pressed(object sender, EventArgs e)
+        {
+            if (turn%2 == 0)
+            {
+                if (((Button)sender).Name == "skill1_Button")
+                {
+                    label2.Text = hero.LeftHand.name;
+                }
+                else if (((Button)sender).Name == "skill2_Button")
+                {
+                    label2.Text = hero.Armor.name;
+                }
+                else if (((Button)sender).Name == "skill3_Button")
+                {
+                    label2.Text = hero.RightHand.name;
+                }
+                else if (((Button)sender).Name == "hppotion_Button")
+                {
+                    label2.Text = hero.Heal_Potion.name;
+                }
+                else if (((Button)sender).Name == "mppotion_Button")
+                {
+                    label2.Text = hero.Mana_Potion.name;
+                }
+                //turn++;
             }
         }
 
@@ -831,28 +768,15 @@ namespace WFG_3
             //}
 
             ENTERMENU.Hide();
-            MainLoop();
+
+            enemy = A;
+            hero = HERO0;
+
+            battle();
         }
 
-        public void MainLoop()
+        public void battle()
         {
-            while ((cur_room < 5 && cur_floor < 5) && !ISDEAD)
-            {
-                //Рандомная генерация моба
-                Mob A = new Mob(1, "PIZDA", Elf, Class.Mage, Wand, Acorn, FireBall);
-
-                Battle_process(A);
-            }
-        }
-
-        public void Battle_process(Mob enemy0)
-        {
-            int turn = 0;
-            Mob enemy = enemy0;
-            Hero hero = HERO0;
-
-            WARMENU.Display();
-
             roomfloor_label.Text = "FLOOR " + Convert.ToString(cur_floor) + "-" + Convert.ToString(cur_room) + " ROOM";
 
             enemyicon_pictureBox.Image = enemy.icon;
@@ -860,8 +784,8 @@ namespace WFG_3
             enemylvl_label.Text = Convert.ToString(enemy.LVL);
             enemyhp_Bar.Value = 100;
             enemymp_Bar.Value = 100;
-            enemyhp_label.Text = "Health: " + Convert.ToString(enemy.HP) + "/" + Convert.ToString(enemy0.HP);
-            enemymp_label.Text = "Mana: " + Convert.ToString(enemy.MP) + "/" + Convert.ToString(enemy0.MP);
+            enemyhp_label.Text = "Health: " + Convert.ToString(enemy.HP) + "/" + Convert.ToString(enemy.HP);
+            enemymp_label.Text = "Mana: " + Convert.ToString(enemy.MP) + "/" + Convert.ToString(enemy.MP);
 
 
             heroicon_pictureBox.Image = hero.icon;
@@ -879,11 +803,7 @@ namespace WFG_3
             herohp_label.Text = "Health: " + Convert.ToString(hero.HP) + "/" + Convert.ToString(HERO0.HP);
             heromp_label.Text = "Mana: " + Convert.ToString(hero.MP) + "/" + Convert.ToString(HERO0.MP);
 
-            ISDEAD = true;
-            //while (hero.HP > 0 && enemy.HP > 0)
-            //{
-
-            //}
+            WARMENU.Display();
         }
     }
 }

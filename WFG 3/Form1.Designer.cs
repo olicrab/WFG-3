@@ -81,6 +81,7 @@ namespace WFG_3
             this.heromp_label = new System.Windows.Forms.Label();
             this.enemyhp_label = new System.Windows.Forms.Label();
             this.enemymp_label = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.nameChoice.SuspendLayout();
@@ -126,13 +127,14 @@ namespace WFG_3
             // 
             // exit
             // 
+            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.exit.Location = new System.Drawing.Point(5, 85);
             this.exit.Margin = new System.Windows.Forms.Padding(4);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(257, 31);
             this.exit.TabIndex = 2;
             this.exit.Text = "Exit";
-            this.exit.UseVisualStyleBackColor = true;
+            this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             this.exit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.exit.MouseEnter += new System.EventHandler(this.button_MouseEnter);
@@ -140,20 +142,21 @@ namespace WFG_3
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.button2.Location = new System.Drawing.Point(5, 45);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(257, 31);
             this.button2.TabIndex = 1;
             this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.button2.MouseEnter += new System.EventHandler(this.button_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.button_MouseLeave);
             // 
             // start
             // 
-            this.start.BackColor = System.Drawing.Color.Transparent;
+            this.start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.start.Location = new System.Drawing.Point(5, 5);
             this.start.Margin = new System.Windows.Forms.Padding(4);
             this.start.Name = "start";
@@ -186,13 +189,14 @@ namespace WFG_3
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(233, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 47);
             this.button1.TabIndex = 5;
             this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.createhero_Click);
             this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.button1.MouseEnter += new System.EventHandler(this.button_MouseEnter);
@@ -235,7 +239,7 @@ namespace WFG_3
             // 
             // elf
             // 
-            this.elf.Appearance = System.Windows.Forms.Appearance.Button;
+            this.elf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.elf.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elf.ForeColor = System.Drawing.Color.Black;
             this.elf.Location = new System.Drawing.Point(6, 164);
@@ -244,14 +248,14 @@ namespace WFG_3
             this.elf.TabIndex = 5;
             this.elf.Text = "Elf";
             this.elf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.elf.UseVisualStyleBackColor = true;
+            this.elf.UseVisualStyleBackColor = false;
             this.elf.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.elf.MouseEnter += new System.EventHandler(this.radiobutton_MouseEnter);
             this.elf.MouseLeave += new System.EventHandler(this.radiobutton_MouseLeave);
             // 
             // human
             // 
-            this.human.Appearance = System.Windows.Forms.Appearance.Button;
+            this.human.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.human.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.human.ForeColor = System.Drawing.Color.Black;
             this.human.Location = new System.Drawing.Point(6, 96);
@@ -260,14 +264,14 @@ namespace WFG_3
             this.human.TabIndex = 4;
             this.human.Text = "Human";
             this.human.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.human.UseVisualStyleBackColor = true;
+            this.human.UseVisualStyleBackColor = false;
             this.human.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.human.MouseEnter += new System.EventHandler(this.radiobutton_MouseEnter);
             this.human.MouseLeave += new System.EventHandler(this.radiobutton_MouseLeave);
             // 
             // ogre
             // 
-            this.ogre.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ogre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.ogre.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ogre.ForeColor = System.Drawing.Color.Black;
             this.ogre.Location = new System.Drawing.Point(6, 24);
@@ -276,7 +280,7 @@ namespace WFG_3
             this.ogre.TabIndex = 3;
             this.ogre.Text = "Ogre";
             this.ogre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ogre.UseVisualStyleBackColor = true;
+            this.ogre.UseVisualStyleBackColor = false;
             this.ogre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.ogre.MouseEnter += new System.EventHandler(this.radiobutton_MouseEnter);
             this.ogre.MouseLeave += new System.EventHandler(this.radiobutton_MouseLeave);
@@ -297,7 +301,7 @@ namespace WFG_3
             // 
             // mage
             // 
-            this.mage.Appearance = System.Windows.Forms.Appearance.Button;
+            this.mage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.mage.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mage.ForeColor = System.Drawing.Color.Black;
             this.mage.Location = new System.Drawing.Point(6, 164);
@@ -306,14 +310,14 @@ namespace WFG_3
             this.mage.TabIndex = 2;
             this.mage.Text = "Mage";
             this.mage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mage.UseVisualStyleBackColor = true;
+            this.mage.UseVisualStyleBackColor = false;
             this.mage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.mage.MouseEnter += new System.EventHandler(this.radiobutton_MouseEnter);
             this.mage.MouseLeave += new System.EventHandler(this.radiobutton_MouseLeave);
             // 
             // ranger
             // 
-            this.ranger.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ranger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.ranger.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ranger.ForeColor = System.Drawing.Color.Black;
             this.ranger.Location = new System.Drawing.Point(6, 96);
@@ -322,14 +326,14 @@ namespace WFG_3
             this.ranger.TabIndex = 1;
             this.ranger.Text = "Ranger";
             this.ranger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ranger.UseVisualStyleBackColor = true;
+            this.ranger.UseVisualStyleBackColor = false;
             this.ranger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.ranger.MouseEnter += new System.EventHandler(this.radiobutton_MouseEnter);
             this.ranger.MouseLeave += new System.EventHandler(this.radiobutton_MouseLeave);
             // 
             // warrior
             // 
-            this.warrior.Appearance = System.Windows.Forms.Appearance.Button;
+            this.warrior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.warrior.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warrior.ForeColor = System.Drawing.Color.Black;
             this.warrior.Location = new System.Drawing.Point(6, 24);
@@ -338,19 +342,20 @@ namespace WFG_3
             this.warrior.TabIndex = 0;
             this.warrior.Text = "Warrior";
             this.warrior.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.warrior.UseVisualStyleBackColor = true;
+            this.warrior.UseVisualStyleBackColor = false;
             this.warrior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             this.warrior.MouseEnter += new System.EventHandler(this.radiobutton_MouseEnter);
             this.warrior.MouseLeave += new System.EventHandler(this.radiobutton_MouseLeave);
             // 
             // enter
             // 
+            this.enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
             this.enter.Location = new System.Drawing.Point(250, 265);
             this.enter.Name = "enter";
             this.enter.Size = new System.Drawing.Size(284, 31);
             this.enter.TabIndex = 6;
             this.enter.Text = "ENTER";
-            this.enter.UseVisualStyleBackColor = true;
+            this.enter.UseVisualStyleBackColor = false;
             this.enter.Click += new System.EventHandler(this.enter_Click);
             this.enter.MouseEnter += new System.EventHandler(this.button_MouseEnter);
             this.enter.MouseLeave += new System.EventHandler(this.button_MouseLeave);
@@ -419,6 +424,7 @@ namespace WFG_3
             this.mppotion_Button.Size = new System.Drawing.Size(64, 64);
             this.mppotion_Button.TabIndex = 10;
             this.mppotion_Button.UseVisualStyleBackColor = true;
+            this.mppotion_Button.Click += new System.EventHandler(this.skillbutton_Pressed);
             // 
             // hppotion_Panel
             // 
@@ -436,6 +442,7 @@ namespace WFG_3
             this.hppotion_Button.Size = new System.Drawing.Size(64, 64);
             this.hppotion_Button.TabIndex = 9;
             this.hppotion_Button.UseVisualStyleBackColor = true;
+            this.hppotion_Button.Click += new System.EventHandler(this.skillbutton_Pressed);
             // 
             // skill2_Panel
             // 
@@ -453,6 +460,7 @@ namespace WFG_3
             this.skill2_Button.Size = new System.Drawing.Size(64, 64);
             this.skill2_Button.TabIndex = 7;
             this.skill2_Button.UseVisualStyleBackColor = true;
+            this.skill2_Button.Click += new System.EventHandler(this.skillbutton_Pressed);
             // 
             // skill1_Panel
             // 
@@ -470,6 +478,7 @@ namespace WFG_3
             this.skill1_Button.Size = new System.Drawing.Size(64, 64);
             this.skill1_Button.TabIndex = 6;
             this.skill1_Button.UseVisualStyleBackColor = true;
+            this.skill1_Button.Click += new System.EventHandler(this.skillbutton_Pressed);
             // 
             // skill3_Panel
             // 
@@ -487,6 +496,7 @@ namespace WFG_3
             this.skill3_Button.Size = new System.Drawing.Size(64, 64);
             this.skill3_Button.TabIndex = 8;
             this.skill3_Button.UseVisualStyleBackColor = true;
+            this.skill3_Button.Click += new System.EventHandler(this.skillbutton_Pressed);
             // 
             // event_label
             // 
@@ -695,6 +705,15 @@ namespace WFG_3
             this.enemymp_label.TabIndex = 41;
             this.enemymp_label.Text = "Mana";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 218);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -702,6 +721,7 @@ namespace WFG_3
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.enemymp_label);
             this.Controls.Add(this.enemyhp_label);
             this.Controls.Add(this.heromp_label);
@@ -809,6 +829,7 @@ namespace WFG_3
         private System.Windows.Forms.Label heromp_label;
         private System.Windows.Forms.Label enemyhp_label;
         private System.Windows.Forms.Label enemymp_label;
+        private System.Windows.Forms.Label label2;
     }
 }
 
