@@ -550,7 +550,7 @@ namespace WFG_3
         public int turn = 0;
 
         Hero HERO0 = new Hero();
-
+        Mob ENEMY0 = new Mob();
         Hero hero = new Hero();
         Mob enemy = new Mob();
 
@@ -664,30 +664,6 @@ namespace WFG_3
 
         private void skillbutton_Pressed(object sender, EventArgs e)
         {
-            if (turn%2 == 0)
-            {
-                if (((Button)sender).Name == "skill1_Button")
-                {
-                    label2.Text = hero.LeftHand.name;
-                }
-                else if (((Button)sender).Name == "skill2_Button")
-                {
-                    label2.Text = hero.Armor.name;
-                }
-                else if (((Button)sender).Name == "skill3_Button")
-                {
-                    label2.Text = hero.RightHand.name;
-                }
-                else if (((Button)sender).Name == "hppotion_Button")
-                {
-                    label2.Text = hero.Heal_Potion.name;
-                }
-                else if (((Button)sender).Name == "mppotion_Button")
-                {
-                    label2.Text = hero.Mana_Potion.name;
-                }
-                //turn++;
-            }
         }
 
 
@@ -768,42 +744,8 @@ namespace WFG_3
             //}
 
             ENTERMENU.Hide();
+            ENEMY0 = A;
 
-            enemy = A;
-            hero = HERO0;
-
-            battle();
-        }
-
-        public void battle()
-        {
-            roomfloor_label.Text = "FLOOR " + Convert.ToString(cur_floor) + "-" + Convert.ToString(cur_room) + " ROOM";
-
-            enemyicon_pictureBox.Image = enemy.icon;
-            enemyname_label.Text = enemy.name;
-            enemylvl_label.Text = Convert.ToString(enemy.LVL);
-            enemyhp_Bar.Value = 100;
-            enemymp_Bar.Value = 100;
-            enemyhp_label.Text = "Health: " + Convert.ToString(enemy.HP) + "/" + Convert.ToString(enemy.HP);
-            enemymp_label.Text = "Mana: " + Convert.ToString(enemy.MP) + "/" + Convert.ToString(enemy.MP);
-
-
-            heroicon_pictureBox.Image = hero.icon;
-            heroname_label.Text = hero.name;
-            herolvl_label.Text = Convert.ToString(hero.LVL);
-            herohp_Bar.Value = 100;
-            heromp_Bar.Value = 100;
-            skill1_Button.Image = hero.LeftHand.img;
-            skill2_Button.Image = hero.Armor.img;
-            skill3_Button.Image = hero.RightHand.img;
-            hppotion_Button.BackgroundImage = hero.Heal_Potion.img;
-            mppotion_Button.BackgroundImage = hero.Mana_Potion.img;
-            hppotion_counter.Text = Convert.ToString(hero.HealPotionCounter);
-            mppotion_counter.Text = Convert.ToString(hero.ManaPotionCounter);
-            herohp_label.Text = "Health: " + Convert.ToString(hero.HP) + "/" + Convert.ToString(HERO0.HP);
-            heromp_label.Text = "Mana: " + Convert.ToString(hero.MP) + "/" + Convert.ToString(HERO0.MP);
-
-            WARMENU.Display();
         }
     }
 }
