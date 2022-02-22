@@ -182,5 +182,11 @@
   <ItemGroup>
     <None Include="Resources\buttonclick.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A_HPP_LVL1_HealPotion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A_MPP_LVL1_ManaPotion.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

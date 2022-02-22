@@ -71,6 +71,26 @@ namespace WFG_3.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_HPP_LVL1_HealPotion {
+            get {
+                object obj = ResourceManager.GetObject("A_HPP_LVL1_HealPotion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_MPP_LVL1_ManaPotion {
+            get {
+                object obj = ResourceManager.GetObject("A_MPP_LVL1_ManaPotion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream backgroundIntro_var3 {

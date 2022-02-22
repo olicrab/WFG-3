@@ -233,6 +233,23 @@ namespace WFG_3
 
         }
 
+        public class HealSkill : Skill
+        {
+            public double HP_Heal;
+            public double MP_Heal;
+
+            public HealSkill()
+            {
+                HP_Heal = 0;
+                MP_Heal = 0;
+            }
+            public HealSkill(string name0, string event_content0, int cooldown0, double cost0, string info0, double HP_Heal0, double MP_Heal0):base(name0, event_content0, cooldown0, cost0, info0)
+            {
+                HP_Heal = HP_Heal0;
+                MP_Heal = MP_Heal0;
+            }
+        }
+
 
         public class Item
         {
@@ -290,7 +307,7 @@ namespace WFG_3
             }
         }
 
-        public class Potion:Item
+        public class Potion : Item
         {
             public double heal_HP;
             public double heal_MP;
@@ -301,7 +318,7 @@ namespace WFG_3
                 heal_MP = 0;
             }
 
-            public Potion(string name0, string img_path0, Slot slot0, Class Class0, int LVL0, double heal_HP0, double heal_MP0):base(name0, img_path0, slot0, Class0, LVL0)
+            public Potion(string name0, string img_path0, Slot slot0, Class Class0, int LVL0, double heal_HP0, double heal_MP0) : base(name0, img_path0, slot0, Class0, LVL0)
             {
                 heal_HP = heal_HP0;
                 heal_MP = heal_MP0;
@@ -393,10 +410,10 @@ namespace WFG_3
             public Item RightHand;
             public Item Armor;
             public int HealPotionCounter;
-            public Potion HealPotion;
+            public Item Heal_Potion;
             public int ManaPotionCounter;
-            public Potion ManaPotion;
-            
+            public Item Mana_Potion;
+
 
             public Hero()
             {
@@ -481,6 +498,11 @@ namespace WFG_3
                         Armor = Acorn;
                     }
                 }
+
+                HealPotionCounter = 3;
+                Heal_Potion = HealPotion;
+                ManaPotionCounter = 3;
+                Mana_Potion = ManaPotion;
             }
         }
 
@@ -500,9 +522,9 @@ namespace WFG_3
                 Armor = null;
                 RightHand = null;
 
-        }
+            }
 
-        public Mob(int LVL0, string name0, Race race0, Class Class0, Item LeftHand0, Item Armor0, Item RightHand0) : base(LVL0, name0, race0)
+            public Mob(int LVL0, string name0, Race race0, Class Class0, Item LeftHand0, Item Armor0, Item RightHand0) : base(LVL0, name0, race0)
             {
                 Class = Class0;
                 if (race.name == "Ogre")
@@ -556,6 +578,12 @@ namespace WFG_3
             }
         }
 
+        public class BattleEvent
+        {
+            
+        }
+
+
         //РАССЫ
         static Race Ogre = new Race("Ogre");
         static Race Human = new Race("Human");
@@ -575,6 +603,8 @@ namespace WFG_3
         Skill Axe_Attack = new DamageSkill("Axe_Attack", "", 5, 30, "Axe Attack", 50);
         Skill Bubble_shield = new BubbleSkill("Bubble_shield", "", 10, 30, "Imposes invulnerability", 2);
         Skill Mage_invisibility = new BubbleSkill("Mage_invisibility", "", 8, 20, "Makes the hero invisible", 1);
+        Skill Heal1 = new HealSkill("Heal", "", 3, 0, "Heal your hero", 50, 0);
+        Skill Mana1 = new HealSkill("Heal", "", 3, 0, "Restore Mana", 0, 50);
 
 
 
@@ -589,10 +619,15 @@ namespace WFG_3
         static Item PoisonedArrow = new Item("PoisonedArrow", "C:/Проект/WFG 3 — копия/WFG 3/Resources/R_RH_LVL1_PoisonedArrow.png", Slot.RightHand, Class.Ranger, 1);
         static Item Wand = new Item("Wand", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_LH_LVL1_Wand.png", Slot.LeftHand, Class.Mage, 1);
         static Item FireBall = new Item("FireBall", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL1_FireBall.png", Slot.RightHand, Class.Mage, 1);
-        
+
+        //ХИЛКИ
+        static Item HealPotion = new Potion("Heal Potion", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_HPP_LVL1_HealPotion.png", Slot.HPPotion, Class.None, 1, 50, 0);
+        static Item ManaPotion = new Potion("Heal Potion", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_MPP_LVL1_ManaPotion.png", Slot.MPPotion, Class.None, 1,  0, 50);
 
         //1 LVL
         static Item Axe = new Item("Giant Axe", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL1_AXE.png", Slot.RightHand, Class.Warrior, 1);
+
+        //2 LVL
         static Item Sacred_Shield = new Item("The sacred shield", "C:/Проект/WFG 3 — копия/WFG 3/Resources/W_RH_LVL2_SacredShield.png", Slot.RightHand, Class.Warrior, 2);
         static Item invisibility_ring = new Item("Invisibility ring", "C:/Проект/WFG 3 — копия/WFG 3/Resources/M_RH_LVL2_InvizRing.png", Slot.RightHand, Class.None, 2);
 
@@ -601,8 +636,9 @@ namespace WFG_3
         //НЕДОМОБЫ
         //Mob A = new Mob(1, "Urulgharl", Elf, Class.Warrior);
 
+        
 
-        Hero HERO = new Hero();
+        Hero HERO0 = new Hero();
 
         Page MAINMENU = new Page();
         Page CREATEHEROMENU = new Page();
@@ -613,6 +649,7 @@ namespace WFG_3
         public int cur_floor;
         public int cur_room;
 
+        public bool ISDEAD = false;
 
         //СДЕЛАТЬ ИНИЦИАЛИЗАЦИЮ ПРЕДМЕТОВ СКИЛАМИ (СКИЛЫ И ПРЕДМЕТЫ СОЗДАЮТСЯ СВЕРХУ, НО ПРЕДМЕТЫ БЕЗ СКИЛОВ)
         public Form1()
@@ -631,6 +668,9 @@ namespace WFG_3
             Axe.addSkill(Axe_Attack);
             Sacred_Shield.addSkill(Bubble_shield);
             invisibility_ring.addSkill(Mage_invisibility);
+            HealPotion.addSkill(Heal1);
+            ManaPotion.addSkill(Mana1);
+
 
             MAINMENU.addElement(label1);
             MAINMENU.addElement(panel1);
@@ -659,6 +699,10 @@ namespace WFG_3
             WARMENU.addElement(heromp_Bar);
             WARMENU.addElement(heroinfo_groupBox);
             WARMENU.addElement(event_label);
+
+            cur_floor = 1;
+            cur_room = 1;
+
 
 
             MAINMENU.Display();
@@ -755,7 +799,7 @@ namespace WFG_3
 
                         name0 = namebox.Text;
 
-                        HERO = new Hero(1, name0, race0, Class0);
+                        HERO0 = new Hero(1, name0, race0, Class0);
 
                         CREATEHEROMENU.Hide();
                         ENTERMENU.Display();
@@ -770,15 +814,15 @@ namespace WFG_3
 
             using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/backgroundIntro_var3.wav"))
             {
-                soundPlayer.Play(); 
+                soundPlayer.Play();
                 soundPlayer.PlayLooping();
             }
 
-            while (label1.Location.Y < 600)
-            {
-                label1.Location = new Point(label1.Location.X, label1.Location.Y + 1);
-                await Task.Delay(15);
-            }
+            //while (label1.Location.Y < 600)
+            //{
+            //    label1.Location = new Point(label1.Location.X, label1.Location.Y + 1);
+            //    await Task.Delay(15);
+            //}
 
             ENTERMENU.Hide();
             MainLoop();
@@ -786,27 +830,48 @@ namespace WFG_3
 
         public void MainLoop()
         {
-            //enemyicon_pictureBox.Image = A.icon;
-            //enemyname_label.Text = A.name;
-            //enemylvl_label.Text = Convert.ToString(A.LVL);
-            //enemyhp_Bar.Minimum = 0;
-            //enemyhp_Bar.Maximum = Convert.ToInt32(A.HP);
-            //enemyhp_Bar.Value = Convert.ToInt32(A.HP);
+            while ((cur_room < 5 && cur_floor < 5) && !ISDEAD)
+            {
+                //Рандомная генерация моба
+                Mob A = new Mob(1, "PIZDA", Elf, Class.Mage, Wand, Acorn, FireBall);
 
+                Battle_process(A);
+            }
+        }
 
-            //heroicon_pictureBox.Image = HERO.icon;
-            //herolvl_label.Text = Convert.ToString(HERO.LVL);
-            //heroname_label.Text = HERO.name;
-            //skill1_Button.Image = HERO.LeftHand.img;
-            //skill2_Button.Image = HERO.Armor.img;
-            //skill3_Button.Image = HERO.RightHand.img;
-            //herohp_Bar.Minimum = 0;
-            //herohp_Bar.Maximum = Convert.ToInt32(A.HP);
-            //herohp_Bar.Value = Convert.ToInt32(A.HP);
-            //WARMENU.Display();
+        public void Battle_process(Mob enemy)
+        {
+            int turn = 0;
+            Hero hero = HERO0;
 
-            
+            WARMENU.Display();
 
+            roomfloor_label.Text = "FLOOR " + Convert.ToString(cur_floor) + "-" + Convert.ToString(cur_room) + " ROOM";
+
+            enemyicon_pictureBox.Image = enemy.icon;
+            enemyname_label.Text = enemy.name;
+            enemylvl_label.Text = Convert.ToString(enemy.LVL);
+            enemyhp_Bar.Value = 100;
+            enemymp_Bar.Value = 100;
+
+            heroicon_pictureBox.Image = hero.icon;
+            heroname_label.Text = hero.name;
+            herolvl_label.Text = Convert.ToString(hero.LVL);
+            herohp_Bar.Value = 100;
+            heromp_Bar.Value = 100;
+            skill1_Button.Image = hero.LeftHand.img;
+            skill2_Button.Image = hero.Armor.img;
+            skill3_Button.Image = hero.RightHand.img;
+            hppotion_Button.BackgroundImage = hero.Heal_Potion.img;
+            mppotion_Button.BackgroundImage = hero.Mana_Potion.img;
+            hppotion_counter.Text = Convert.ToString(hero.HealPotionCounter);
+            mppotion_counter.Text = Convert.ToString(hero.ManaPotionCounter);
+
+            ISDEAD = true;
+            //while (hero.HP > 0 && enemy.HP > 0)
+            //{
+
+            //}
         }
     }
 }

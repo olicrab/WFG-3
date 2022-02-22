@@ -495,15 +495,14 @@ namespace WFG_3
             // 
             // roomfloor_label
             // 
-            this.roomfloor_label.AutoSize = true;
             this.roomfloor_label.BackColor = System.Drawing.Color.Transparent;
             this.roomfloor_label.Font = new System.Drawing.Font("NSimSun", 20.25F);
             this.roomfloor_label.ForeColor = System.Drawing.Color.Maroon;
-            this.roomfloor_label.Location = new System.Drawing.Point(494, 10);
+            this.roomfloor_label.Location = new System.Drawing.Point(483, 10);
             this.roomfloor_label.Name = "roomfloor_label";
-            this.roomfloor_label.Size = new System.Drawing.Size(278, 27);
+            this.roomfloor_label.Size = new System.Drawing.Size(289, 27);
             this.roomfloor_label.TabIndex = 26;
-            this.roomfloor_label.Text = "FLOOR   5--1   ROOM";
+            this.roomfloor_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // skill2_CD
             // 
@@ -582,7 +581,7 @@ namespace WFG_3
             // 
             // enemymp_Bar
             // 
-            this.enemymp_Bar.BackColor = System.Drawing.Color.Cyan;
+            this.enemymp_Bar.BackColor = System.Drawing.Color.Blue;
             this.enemymp_Bar.Location = new System.Drawing.Point(253, 68);
             this.enemymp_Bar.Name = "enemymp_Bar";
             this.enemymp_Bar.Size = new System.Drawing.Size(518, 23);
