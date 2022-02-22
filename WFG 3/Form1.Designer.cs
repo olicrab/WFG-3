@@ -77,6 +77,10 @@ namespace WFG_3
             this.enemyname_label = new System.Windows.Forms.Label();
             this.enemyicon_pictureBox = new System.Windows.Forms.PictureBox();
             this.enemyinfo_groupBox = new System.Windows.Forms.GroupBox();
+            this.herohp_label = new System.Windows.Forms.Label();
+            this.heromp_label = new System.Windows.Forms.Label();
+            this.enemyhp_label = new System.Windows.Forms.Label();
+            this.enemymp_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.nameChoice.SuspendLayout();
@@ -518,18 +522,22 @@ namespace WFG_3
             // 
             // heromp_Bar
             // 
-            this.heromp_Bar.BackColor = System.Drawing.Color.Cyan;
+            this.heromp_Bar.BackColor = System.Drawing.Color.PeachPuff;
+            this.heromp_Bar.ForeColor = System.Drawing.Color.MediumBlue;
             this.heromp_Bar.Location = new System.Drawing.Point(12, 517);
             this.heromp_Bar.Name = "heromp_Bar";
             this.heromp_Bar.Size = new System.Drawing.Size(518, 23);
+            this.heromp_Bar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.heromp_Bar.TabIndex = 25;
             // 
             // herohp_Bar
             // 
-            this.herohp_Bar.BackColor = System.Drawing.Color.LimeGreen;
+            this.herohp_Bar.BackColor = System.Drawing.Color.PeachPuff;
+            this.herohp_Bar.ForeColor = System.Drawing.Color.Green;
             this.herohp_Bar.Location = new System.Drawing.Point(12, 488);
             this.herohp_Bar.Name = "herohp_Bar";
             this.herohp_Bar.Size = new System.Drawing.Size(518, 23);
+            this.herohp_Bar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.herohp_Bar.TabIndex = 24;
             // 
             // herolvl_label
@@ -581,18 +589,22 @@ namespace WFG_3
             // 
             // enemymp_Bar
             // 
-            this.enemymp_Bar.BackColor = System.Drawing.Color.Blue;
+            this.enemymp_Bar.BackColor = System.Drawing.Color.PeachPuff;
+            this.enemymp_Bar.ForeColor = System.Drawing.Color.MediumBlue;
             this.enemymp_Bar.Location = new System.Drawing.Point(253, 68);
             this.enemymp_Bar.Name = "enemymp_Bar";
             this.enemymp_Bar.Size = new System.Drawing.Size(518, 23);
+            this.enemymp_Bar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.enemymp_Bar.TabIndex = 22;
             // 
             // enemyhp_Bar
             // 
-            this.enemyhp_Bar.BackColor = System.Drawing.Color.LimeGreen;
+            this.enemyhp_Bar.BackColor = System.Drawing.Color.Moccasin;
+            this.enemyhp_Bar.ForeColor = System.Drawing.Color.Green;
             this.enemyhp_Bar.Location = new System.Drawing.Point(254, 40);
             this.enemyhp_Bar.Name = "enemyhp_Bar";
             this.enemyhp_Bar.Size = new System.Drawing.Size(518, 23);
+            this.enemyhp_Bar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.enemyhp_Bar.TabIndex = 21;
             // 
             // enemylvl_label
@@ -639,6 +651,50 @@ namespace WFG_3
             this.enemyinfo_groupBox.TabStop = false;
             this.enemyinfo_groupBox.Text = "Enemy";
             // 
+            // herohp_label
+            // 
+            this.herohp_label.AutoSize = true;
+            this.herohp_label.BackColor = System.Drawing.Color.Transparent;
+            this.herohp_label.ForeColor = System.Drawing.Color.LimeGreen;
+            this.herohp_label.Location = new System.Drawing.Point(9, 470);
+            this.herohp_label.Name = "herohp_label";
+            this.herohp_label.Size = new System.Drawing.Size(55, 15);
+            this.herohp_label.TabIndex = 38;
+            this.herohp_label.Text = "Health";
+            // 
+            // heromp_label
+            // 
+            this.heromp_label.AutoSize = true;
+            this.heromp_label.BackColor = System.Drawing.Color.Transparent;
+            this.heromp_label.ForeColor = System.Drawing.Color.Blue;
+            this.heromp_label.Location = new System.Drawing.Point(9, 543);
+            this.heromp_label.Name = "heromp_label";
+            this.heromp_label.Size = new System.Drawing.Size(39, 15);
+            this.heromp_label.TabIndex = 39;
+            this.heromp_label.Text = "Mana";
+            // 
+            // enemyhp_label
+            // 
+            this.enemyhp_label.AutoSize = true;
+            this.enemyhp_label.BackColor = System.Drawing.Color.Transparent;
+            this.enemyhp_label.ForeColor = System.Drawing.Color.LimeGreen;
+            this.enemyhp_label.Location = new System.Drawing.Point(253, 22);
+            this.enemyhp_label.Name = "enemyhp_label";
+            this.enemyhp_label.Size = new System.Drawing.Size(55, 15);
+            this.enemyhp_label.TabIndex = 40;
+            this.enemyhp_label.Text = "Health";
+            // 
+            // enemymp_label
+            // 
+            this.enemymp_label.AutoSize = true;
+            this.enemymp_label.BackColor = System.Drawing.Color.Transparent;
+            this.enemymp_label.ForeColor = System.Drawing.Color.Blue;
+            this.enemymp_label.Location = new System.Drawing.Point(253, 95);
+            this.enemymp_label.Name = "enemymp_label";
+            this.enemymp_label.Size = new System.Drawing.Size(39, 15);
+            this.enemymp_label.TabIndex = 41;
+            this.enemymp_label.Text = "Mana";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -646,6 +702,10 @@ namespace WFG_3
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.enemymp_label);
+            this.Controls.Add(this.enemyhp_label);
+            this.Controls.Add(this.heromp_label);
+            this.Controls.Add(this.herohp_label);
             this.Controls.Add(this.skill3_CD);
             this.Controls.Add(this.skill1_CD);
             this.Controls.Add(this.mppotion_counter);
@@ -745,6 +805,10 @@ namespace WFG_3
         private System.Windows.Forms.Label enemyname_label;
         private System.Windows.Forms.PictureBox enemyicon_pictureBox;
         private System.Windows.Forms.GroupBox enemyinfo_groupBox;
+        private System.Windows.Forms.Label herohp_label;
+        private System.Windows.Forms.Label heromp_label;
+        private System.Windows.Forms.Label enemyhp_label;
+        private System.Windows.Forms.Label enemymp_label;
     }
 }
 

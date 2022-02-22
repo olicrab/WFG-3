@@ -580,7 +580,9 @@ namespace WFG_3
 
         public class BattleEvent
         {
-            
+            static public bool IsChanged;
+            static public Item ItemPressed;
+
         }
 
 
@@ -699,6 +701,10 @@ namespace WFG_3
             WARMENU.addElement(heromp_Bar);
             WARMENU.addElement(heroinfo_groupBox);
             WARMENU.addElement(event_label);
+            WARMENU.addElement(herohp_label);
+            WARMENU.addElement(heromp_label);
+            WARMENU.addElement(enemyhp_label);
+            WARMENU.addElement(enemymp_label);
 
             cur_floor = 1;
             cur_room = 1;
@@ -839,9 +845,10 @@ namespace WFG_3
             }
         }
 
-        public void Battle_process(Mob enemy)
+        public void Battle_process(Mob enemy0)
         {
             int turn = 0;
+            Mob enemy = enemy0;
             Hero hero = HERO0;
 
             WARMENU.Display();
@@ -853,6 +860,9 @@ namespace WFG_3
             enemylvl_label.Text = Convert.ToString(enemy.LVL);
             enemyhp_Bar.Value = 100;
             enemymp_Bar.Value = 100;
+            enemyhp_label.Text = "Health: " + Convert.ToString(enemy.HP) + "/" + Convert.ToString(enemy0.HP);
+            enemymp_label.Text = "Mana: " + Convert.ToString(enemy.MP) + "/" + Convert.ToString(enemy0.MP);
+
 
             heroicon_pictureBox.Image = hero.icon;
             heroname_label.Text = hero.name;
@@ -866,6 +876,8 @@ namespace WFG_3
             mppotion_Button.BackgroundImage = hero.Mana_Potion.img;
             hppotion_counter.Text = Convert.ToString(hero.HealPotionCounter);
             mppotion_counter.Text = Convert.ToString(hero.ManaPotionCounter);
+            herohp_label.Text = "Health: " + Convert.ToString(hero.HP) + "/" + Convert.ToString(HERO0.HP);
+            heromp_label.Text = "Mana: " + Convert.ToString(hero.MP) + "/" + Convert.ToString(HERO0.MP);
 
             ISDEAD = true;
             //while (hero.HP > 0 && enemy.HP > 0)
