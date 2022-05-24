@@ -378,24 +378,24 @@ namespace WFG_3
                 name = name0;
                 if (name0 == "Ogre")
                 {
-                    kHP = 1;
+                    kHP = 1.5;
                     dHP = 50;
-                    kMP = 1;
-                    dMP = -50;
+                    kMP = 1.2;
+                    dMP = -20;
 
                 }
                 else if (name0 == "Human")
                 {
-                    kHP = 1;
+                    kHP = 1.75;
                     dHP = 0;
-                    kMP = 1;
+                    kMP = 1.75;
                     dMP = 0;
                 }
                 else if (name0 == "Elf")
                 {
-                    kHP = 1;
-                    dHP = -50;
-                    kMP = 1;
+                    kHP = 1.2;
+                    dHP = -20;
+                    kMP = 1.5;
                     dMP = 50;
                 }
             }
@@ -1094,17 +1094,17 @@ namespace WFG_3
         {
             enter.Visible = false;
 
-            using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/backgroundIntro_var3.wav"))
-            {
-                soundPlayer.Play();
-                soundPlayer.PlayLooping();
-            }
+            //using (var soundPlayer = new SoundPlayer(@"C:/Проект/WFG 3 — копия/WFG 3/Resources/backgroundIntro_var3.wav"))
+            //{
+            //    soundPlayer.Play();
+            //    soundPlayer.PlayLooping();
+            //}
 
-            while (label1.Location.Y < 600)
-            {
-                label1.Location = new Point(label1.Location.X, label1.Location.Y + 1);
-                await Task.Delay(15);
-            }
+            //while (label1.Location.Y < 600)
+            //{
+            //    label1.Location = new Point(label1.Location.X, label1.Location.Y + 1);
+            //    await Task.Delay(15);
+            //}
 
             ENTERMENU.Hide();
             MainLoop();
