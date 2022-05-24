@@ -231,6 +231,66 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap M_AMR_LVL1_Armor {
+            get {
+                object obj = ResourceManager.GetObject("M_AMR_LVL1_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_AMR_LVL1_Armor2 {
+            get {
+                object obj = ResourceManager.GetObject("M_AMR_LVL1_Armor2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_AMR_LVL2_Armor {
+            get {
+                object obj = ResourceManager.GetObject("M_AMR_LVL2_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_AMR_LVL3_Armor {
+            get {
+                object obj = ResourceManager.GetObject("M_AMR_LVL3_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_AMR_LVL4_Armor {
+            get {
+                object obj = ResourceManager.GetObject("M_AMR_LVL4_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_AMR_LVL5_Armor {
+            get {
+                object obj = ResourceManager.GetObject("M_AMR_LVL5_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap M_LH_LVL1_Wand {
             get {
                 object obj = ResourceManager.GetObject("M_LH_LVL1_Wand", resourceCulture);
@@ -241,9 +301,109 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap M_LH_LVL1_Wand2 {
+            get {
+                object obj = ResourceManager.GetObject("M_LH_LVL1_Wand2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_LH_LVL2_Wand {
+            get {
+                object obj = ResourceManager.GetObject("M_LH_LVL2_Wand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_LH_LVL3_Wand {
+            get {
+                object obj = ResourceManager.GetObject("M_LH_LVL3_Wand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_LH_LVL4_Wand {
+            get {
+                object obj = ResourceManager.GetObject("M_LH_LVL4_Wand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_LH_LVL5_Wand {
+            get {
+                object obj = ResourceManager.GetObject("M_LH_LVL5_Wand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap M_RH_LVL1_FireBall {
             get {
                 object obj = ResourceManager.GetObject("M_RH_LVL1_FireBall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_RH_LVL1_Hand {
+            get {
+                object obj = ResourceManager.GetObject("M_RH_LVL1_Hand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_RH_LVL2_Ring {
+            get {
+                object obj = ResourceManager.GetObject("M_RH_LVL2_Ring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_RH_LVL3_SpellBook {
+            get {
+                object obj = ResourceManager.GetObject("M_RH_LVL3_SpellBook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_RH_LVL4_Clock {
+            get {
+                object obj = ResourceManager.GetObject("M_RH_LVL4_Clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap M_RH_LVL5_SpellBook {
+            get {
+                object obj = ResourceManager.GetObject("M_RH_LVL5_SpellBook", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -311,6 +471,66 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap R_AMR_LVL1_Armor {
+            get {
+                object obj = ResourceManager.GetObject("R_AMR_LVL1_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_AMR_LVL1_Armor2 {
+            get {
+                object obj = ResourceManager.GetObject("R_AMR_LVL1_Armor2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_AMR_LVL2_Armor {
+            get {
+                object obj = ResourceManager.GetObject("R_AMR_LVL2_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_AMR_LVL3_Armor {
+            get {
+                object obj = ResourceManager.GetObject("R_AMR_LVL3_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_AMR_LVL4_Armor {
+            get {
+                object obj = ResourceManager.GetObject("R_AMR_LVL4_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_AMR_LVL5_Armor {
+            get {
+                object obj = ResourceManager.GetObject("R_AMR_LVL5_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R_LH_LVL1_Bow {
             get {
                 object obj = ResourceManager.GetObject("R_LH_LVL1_Bow", resourceCulture);
@@ -321,9 +541,169 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap R_LH_LVL1_Crossbow {
+            get {
+                object obj = ResourceManager.GetObject("R_LH_LVL1_Crossbow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_LH_LVL2_Crossbow {
+            get {
+                object obj = ResourceManager.GetObject("R_LH_LVL2_Crossbow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_LH_LVL3_Rifle {
+            get {
+                object obj = ResourceManager.GetObject("R_LH_LVL3_Rifle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_LH_LVL4_Bow {
+            get {
+                object obj = ResourceManager.GetObject("R_LH_LVL4_Bow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_LH_LVL5_Rifle {
+            get {
+                object obj = ResourceManager.GetObject("R_LH_LVL5_Rifle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_RH_LVL1_Knife {
+            get {
+                object obj = ResourceManager.GetObject("R_RH_LVL1_Knife", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R_RH_LVL1_PoisonedArrow {
             get {
                 object obj = ResourceManager.GetObject("R_RH_LVL1_PoisonedArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_RH_LVL2_Knife {
+            get {
+                object obj = ResourceManager.GetObject("R_RH_LVL2_Knife", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_RH_LVL3_Knife {
+            get {
+                object obj = ResourceManager.GetObject("R_RH_LVL3_Knife", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_RH_LVL4_Hand {
+            get {
+                object obj = ResourceManager.GetObject("R_RH_LVL4_Hand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R_RH_LVL5_Knife {
+            get {
+                object obj = ResourceManager.GetObject("R_RH_LVL5_Knife", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_AMR_LVL1_Armor {
+            get {
+                object obj = ResourceManager.GetObject("W_AMR_LVL1_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_AMR_LVL1_Armor2 {
+            get {
+                object obj = ResourceManager.GetObject("W_AMR_LVL1_Armor2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_AMR_LVL2_Armor {
+            get {
+                object obj = ResourceManager.GetObject("W_AMR_LVL2_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_AMR_LVL3_Armor {
+            get {
+                object obj = ResourceManager.GetObject("W_AMR_LVL3_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_AMR_LVL4_Armor {
+            get {
+                object obj = ResourceManager.GetObject("W_AMR_LVL4_Armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_AMR_LVL5_Armor {
+            get {
+                object obj = ResourceManager.GetObject("W_AMR_LVL5_Armor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -351,6 +731,46 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap W_LH_LVL2_Axe {
+            get {
+                object obj = ResourceManager.GetObject("W_LH_LVL2_Axe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_LH_LVL3_Hammer {
+            get {
+                object obj = ResourceManager.GetObject("W_LH_LVL3_Hammer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_LH_LVL4_Halberd {
+            get {
+                object obj = ResourceManager.GetObject("W_LH_LVL4_Halberd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_LH_LVL5_Frostmourne {
+            get {
+                object obj = ResourceManager.GetObject("W_LH_LVL5_Frostmourne", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap W_RH_LVL1_Bracer {
             get {
                 object obj = ResourceManager.GetObject("W_RH_LVL1_Bracer", resourceCulture);
@@ -365,6 +785,66 @@ namespace WFG_3.Properties {
             get {
                 object obj = ResourceManager.GetObject("W_RH_LVL1_Shield", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_RH_LVL2_Shield {
+            get {
+                object obj = ResourceManager.GetObject("W_RH_LVL2_Shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_RH_LVL3_Sword {
+            get {
+                object obj = ResourceManager.GetObject("W_RH_LVL3_Sword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_RH_LVL4_Axe {
+            get {
+                object obj = ResourceManager.GetObject("W_RH_LVL4_Axe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_RH_LVL5_Shield {
+            get {
+                object obj = ResourceManager.GetObject("W_RH_LVL5_Shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Dungeon Master
+        ///Разработано компанией ШАНХАЙСКИЙ БЕСПРЕДЕЛ
+        ///Game vision: Галицков Богдан , Ахунов Олег
+        ///Project lead: Ахунов Олег , Галицков Богдан
+        ///Руководитель отдела искусств: Галицков Богдан , Ахунов Олег
+        ///Руководитель производства: Ахунов Олег , Галицков Богдан
+        ///Генеральный директор студии: Галицков Богдан , Ахунов Олег
+        ///
+        ///Производство
+        ///Помощник продюсера: Ахунов Олег , Галицков Богдан
+        ///Менеджер по производству активов: Галицков Богдан , Ахунов Олег
+        ///Production Coordinators: Ахунов Олег , Галицков Богд [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string титры {
+            get {
+                return ResourceManager.GetString("титры", resourceCulture);
             }
         }
         

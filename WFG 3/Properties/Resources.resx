@@ -169,11 +169,59 @@
   <data name="HumanWarriorGood" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HumanWarriorGood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="M_AMR_LVL1_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_AMR_LVL1_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_AMR_LVL1_Armor2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_AMR_LVL1_Armor2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_AMR_LVL2_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_AMR_LVL2_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_AMR_LVL3_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_AMR_LVL3_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_AMR_LVL4_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_AMR_LVL4_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_AMR_LVL5_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_AMR_LVL5_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="M_LH_LVL1_Wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M_LH_LVL1_Wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="M_LH_LVL1_Wand2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_LH_LVL1_Wand2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_LH_LVL2_Wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_LH_LVL2_Wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_LH_LVL3_Wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_LH_LVL3_Wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_LH_LVL4_Wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_LH_LVL4_Wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_LH_LVL5_Wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_LH_LVL5_Wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="M_RH_LVL1_FireBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M_RH_LVL1_FireBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_RH_LVL1_Hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_RH_LVL1_Hand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_RH_LVL2_Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_RH_LVL2_Ring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_RH_LVL3_SpellBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_RH_LVL3_SpellBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_RH_LVL4_Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_RH_LVL4_Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M_RH_LVL5_SpellBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M_RH_LVL5_SpellBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OgreMageBad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OgreMageBad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,11 +241,77 @@
   <data name="OgreWarriorGood" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OgreWarriorGood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="R_AMR_LVL1_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_AMR_LVL1_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_AMR_LVL1_Armor2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_AMR_LVL1_Armor2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_AMR_LVL2_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_AMR_LVL2_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_AMR_LVL3_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_AMR_LVL3_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_AMR_LVL4_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_AMR_LVL4_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_AMR_LVL5_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_AMR_LVL5_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="R_LH_LVL1_Bow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\R_LH_LVL1_Bow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="R_LH_LVL1_Crossbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_LH_LVL1_Crossbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_LH_LVL2_Crossbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_LH_LVL2_Crossbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_LH_LVL3_Rifle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_LH_LVL3_Rifle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_LH_LVL4_Bow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_LH_LVL4_Bow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_LH_LVL5_Rifle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_LH_LVL5_Rifle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_RH_LVL1_Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_RH_LVL1_Knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="R_RH_LVL1_PoisonedArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\R_RH_LVL1_PoisonedArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_RH_LVL2_Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_RH_LVL2_Knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_RH_LVL3_Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_RH_LVL3_Knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_RH_LVL4_Hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_RH_LVL4_Hand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R_RH_LVL5_Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R_RH_LVL5_Knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_AMR_LVL1_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_AMR_LVL1_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_AMR_LVL1_Armor2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_AMR_LVL1_Armor2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_AMR_LVL2_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_AMR_LVL2_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_AMR_LVL3_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_AMR_LVL3_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_AMR_LVL4_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_AMR_LVL4_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_AMR_LVL5_Armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_AMR_LVL5_Armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="W_LH_LVL1_BroadSword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\W_LH_LVL1_BroadSword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +319,38 @@
   <data name="W_LH_LVL1_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\W_LH_LVL1_Sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="W_LH_LVL2_Axe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_LH_LVL2_Axe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_LH_LVL3_Hammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_LH_LVL3_Hammer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_LH_LVL4_Halberd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_LH_LVL4_Halberd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_LH_LVL5_Frostmourne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_LH_LVL5_Frostmourne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="W_RH_LVL1_Bracer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\W_RH_LVL1_Bracer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="W_RH_LVL1_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\W_RH_LVL1_Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_RH_LVL2_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_RH_LVL2_Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_RH_LVL3_Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_RH_LVL3_Sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_RH_LVL4_Axe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_RH_LVL4_Axe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W_RH_LVL5_Shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W_RH_LVL5_Shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="титры" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\титры.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="ЦЫК" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ЦЫК.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

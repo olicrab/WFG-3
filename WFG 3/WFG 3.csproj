@@ -188,5 +188,146 @@
   <ItemGroup>
     <None Include="Resources\W_RH_LVL1_Bracer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_AMR_LVL1_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_AMR_LVL1_Armor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_AMR_LVL2_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_AMR_LVL3_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_AMR_LVL4_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_AMR_LVL5_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_LH_LVL1_Wand2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_LH_LVL2_Wand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_LH_LVL3_Wand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_LH_LVL4_Wand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_LH_LVL5_Wand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_RH_LVL1_Hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_RH_LVL3_SpellBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_RH_LVL4_Clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_RH_LVL5_SpellBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_AMR_LVL1_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_AMR_LVL1_Armor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_AMR_LVL2_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_AMR_LVL3_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_AMR_LVL4_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_AMR_LVL5_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_LH_LVL1_Crossbow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_LH_LVL2_Crossbow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_LH_LVL3_Rifle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_LH_LVL4_Bow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_LH_LVL5_Rifle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_RH_LVL1_Knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_RH_LVL2_Knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_RH_LVL3_Knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_RH_LVL4_Hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_RH_LVL5_Knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_AMR_LVL1_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_AMR_LVL1_Armor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_AMR_LVL2_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_AMR_LVL3_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_AMR_LVL4_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_AMR_LVL5_Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_LH_LVL2_Axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_LH_LVL3_Hammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_LH_LVL4_Halberd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_LH_LVL5_Frostmourne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_RH_LVL2_Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_RH_LVL3_Sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_RH_LVL4_Axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_RH_LVL5_Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M_RH_LVL2_Ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\титры.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
