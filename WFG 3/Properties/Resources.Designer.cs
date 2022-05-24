@@ -81,16 +81,6 @@ namespace WFG_3.Properties {
         }
         
         /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap A_MPP_LVL1_ManaPotion {
-            get {
-                object obj = ResourceManager.GetObject("A_MPP_LVL1_ManaPotion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream backgroundIntro_var3 {
@@ -321,16 +311,6 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ovi {
-            get {
-                object obj = ResourceManager.GetObject("ovi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap R_LH_LVL1_Bow {
             get {
                 object obj = ResourceManager.GetObject("R_LH_LVL1_Bow", resourceCulture);
@@ -351,9 +331,29 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap W_LH_LVL1_BroadSword {
+            get {
+                object obj = ResourceManager.GetObject("W_LH_LVL1_BroadSword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap W_LH_LVL1_Sword {
             get {
                 object obj = ResourceManager.GetObject("W_LH_LVL1_Sword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap W_RH_LVL1_Bracer {
+            get {
+                object obj = ResourceManager.GetObject("W_RH_LVL1_Bracer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

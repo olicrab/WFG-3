@@ -96,9 +96,6 @@
     <None Include="Resources\Dungeon-Background-OCWIP-PixelArt.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ovi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ElfMageBad.png" />
   </ItemGroup>
   <ItemGroup>
@@ -186,7 +183,10 @@
     <None Include="Resources\A_HPP_LVL1_HealPotion.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\A_MPP_LVL1_ManaPotion.png" />
+    <None Include="Resources\W_LH_LVL1_BroadSword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_RH_LVL1_Bracer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
