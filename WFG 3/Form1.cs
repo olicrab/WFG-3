@@ -924,8 +924,8 @@ namespace WFG_3
         public static ItemList all_items = new ItemList();
 
 
-        int floorlim = 1;
-        int roomlim = 1;
+        int floorlim = 5;
+        int roomlim = 3;
 
 
 
