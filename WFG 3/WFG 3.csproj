@@ -329,5 +329,14 @@
   <ItemGroup>
     <None Include="Resources\титры.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FSke.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\143r.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z0Bl.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

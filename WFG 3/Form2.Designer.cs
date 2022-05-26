@@ -33,7 +33,7 @@ namespace WFG_3
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFG_3.Properties.Resources.Dungeon_Background_OCWIP_PixelArt;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

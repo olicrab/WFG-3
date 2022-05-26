@@ -187,7 +187,6 @@ namespace WFG_3
 
 
 
-            //переделать
             public static string createEventByItem(Item Itm, Creature Object, Creature Victim)
             {
                 if (Itm is HealPotionItem)
@@ -931,8 +930,6 @@ namespace WFG_3
 
         //ВСЕ ПРЕДМЕТЫ ЗАСОВЫВАТЬ В СПИСОК
         //ДЕФОЛТНЫЕ ПРЕДМЕТЫ
-        //добавить нагрудники 1-го уровня
-        //сделать желудь пасхалкой
         static DamageItem Acorn = new DamageItem("Acorn", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_AMR_LVL1_Acorn.png", Slot.Armor, Class.None, 1, 0, 0, 1000);
         static DamageItem trash = new DamageItem("trash", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_AMR_LVL1_Acorn.png", Slot.Armor, Class.None, 1, 0, 1, 0);
 
@@ -1125,9 +1122,6 @@ namespace WFG_3
         #endregion
 
 
-
-
-        //ХИЛКИ
         static HealPotionItem HealPotion = new HealPotionItem("Heal Potion", "C:/Проект/WFG 3 — копия/WFG 3/Resources/A_HPP_LVL1_HealPotion.png", Slot.HPPotion, Class.None, 1, 0, 0, 50);
 
 
@@ -1144,6 +1138,12 @@ namespace WFG_3
         Page WARMENU = new Page();
         Page REWARDPAGE = new Page();
 
+        public Graphics OBJ = null;
+        public Bitmap ORIG = new Bitmap(1,1);
+        public Bitmap TMP = new Bitmap(1,1);
+        public PictureBox PB = null;
+        public bool is_hit = false;
+
         public ToolTip TTtemplate = new ToolTip();
 
         public string EasterEgg = "Поставьте 5, пожалуйста!";
@@ -1155,6 +1155,9 @@ namespace WFG_3
         public int herowinCooldown = 20;
         public int heroloseTimeCounter = 0;
         public int heroloseCooldown = 20;
+
+        public int animationTimeCounter = 0;
+        public int animationCooldown = 50;
 
         public int afterbattleTimeCounter = 0;
         public int afterbattleCooldown = 25;
@@ -1173,7 +1176,6 @@ namespace WFG_3
         {
             InitializeComponent();
 
-            //all_items.Add(Acorn);
             all_items.Add(Sword);
             all_items.Add(Shield);
             all_items.Add(Bow);
@@ -1229,11 +1231,6 @@ namespace WFG_3
             all_items.Add(MoonlightCloak);
             all_items.Add(BlueGlowingVest);
             all_items.Add(ParadoxTamerOutfit);
-
-            AbilitiesList AAA = new AbilitiesList();
-            AAA.AddItem(HealPotion);
-            AAA.AddItem(Bracer);
-            AAA.sort();
 
             MAINMENU.addElement(label1);
             MAINMENU.addElement(panel1);
@@ -1610,6 +1607,10 @@ namespace WFG_3
                     herohp_label.Text = "Health: " + HERO.HP.ToString() + "/" + HERO.max_HP.ToString();
                     hppotion_Button.Enabled = false;
                 }
+                PB = heroicon_pictureBox;
+                ORIG = new Bitmap(PB.Image);
+                is_hit = false;
+                animation_timer.Enabled = true;
             }
             else if (item is DamageItem)
             {
@@ -1638,6 +1639,11 @@ namespace WFG_3
                     heromp_label.Text = "Mana: " + HERO.MP.ToString() + "/" + HERO.max_MP.ToString();
                     skill_CD.Text = item.CD.ToString();
 
+                    PB = enemyicon_pictureBox;
+                    ORIG = new Bitmap(PB.Image);
+                    is_hit = true;
+                    animation_timer.Enabled = true;
+
                     skill_Button.Enabled = false;
                 }
             }
@@ -1663,6 +1669,11 @@ namespace WFG_3
                     heromp_Bar.Value = Convert.ToInt32(100 * HERO.MP / HERO.max_MP);
                     heromp_label.Text = "Mana: " + HERO.MP.ToString() + "/" + HERO.max_MP.ToString();
                     skill_CD.Text = item.CD.ToString();
+
+                    PB = heroicon_pictureBox;
+                    ORIG = new Bitmap(PB.Image);
+                    is_hit = false;
+                    animation_timer.Enabled = true;
 
                     skill_Button.Enabled = false;
                 }
@@ -2180,29 +2191,54 @@ namespace WFG_3
 
         public static Bitmap MakeGrayscale(Bitmap original)
         {
-            //make an empty bitmap the same size as original
             Bitmap newBitmap = new Bitmap(original.Width, original.Height);
 
             for (int i = 0; i < original.Width; i++)
             {
                 for (int j = 0; j < original.Height; j++)
                 {
-                    //get the pixel from the original image
                     Color originalColor = original.GetPixel(i, j);
 
-                    //create the grayscale version of the pixel
                     int grayScale = (int)((originalColor.R * .3) + (originalColor.G * .59)
                         + (originalColor.B * .11));
 
-                    //create the color object
                     Color newColor = Color.FromArgb(grayScale, grayScale, grayScale);
 
-                    //set the new image's pixel to the grayscale version
                     newBitmap.SetPixel(i, j, newColor);
                 }
             }
 
             return newBitmap;
+        }
+
+        private void animation_timer_Tick(object sender, EventArgs e)
+        {
+            if (animationTimeCounter < animationCooldown)
+            {
+                animationTimeCounter++;
+            }
+            else
+            {
+                animationTimeCounter = 0;
+                animation_timer.Enabled = false;
+            }
+
+            PB.Image = ORIG;
+            TMP = new Bitmap(PB.Image);
+            OBJ = Graphics.FromImage(TMP);
+
+
+            int x = 5*animationTimeCounter;
+            if (is_hit)
+            {
+                OBJ.DrawEllipse(new Pen(Brushes.Red, 5), 32 - Convert.ToInt32(x*0.64) -2, 32 - Convert.ToInt32(x * 0.64) -2, Convert.ToInt32(x * 1.28), Convert.ToInt32(x * 1.28));
+            }
+            else
+            {
+                OBJ.DrawEllipse(new Pen(Brushes.Green, 5), 32 - Convert.ToInt32(x * 0.64) -2, 32 - Convert.ToInt32(x * 0.64) -2, Convert.ToInt32(x * 1.28), Convert.ToInt32(x * 1.28));
+            }
+
+            PB.Image = TMP;
         }
     }
 }

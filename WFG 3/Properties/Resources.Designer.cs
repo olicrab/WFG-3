@@ -63,6 +63,16 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _143r {
+            get {
+                object obj = ResourceManager.GetObject("_143r", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap A_AMR_LVL1_Acorn {
             get {
                 object obj = ResourceManager.GetObject("A_AMR_LVL1_Acorn", resourceCulture);
@@ -164,6 +174,16 @@ namespace WFG_3.Properties {
         internal static System.Drawing.Bitmap ElfWarriorGood {
             get {
                 object obj = ResourceManager.GetObject("ElfWarriorGood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FSke {
+            get {
+                object obj = ResourceManager.GetObject("FSke", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -824,6 +844,16 @@ namespace WFG_3.Properties {
         internal static System.Drawing.Bitmap W_RH_LVL5_Shield {
             get {
                 object obj = ResourceManager.GetObject("W_RH_LVL5_Shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Z0Bl {
+            get {
+                object obj = ResourceManager.GetObject("Z0Bl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
