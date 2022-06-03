@@ -40,14 +40,14 @@ namespace WFG_3
             this.button1 = new System.Windows.Forms.Button();
             this.nameChoice = new System.Windows.Forms.GroupBox();
             this.namebox = new System.Windows.Forms.TextBox();
-            this.raceChoice = new System.Windows.Forms.GroupBox();
-            this.elf = new System.Windows.Forms.RadioButton();
-            this.human = new System.Windows.Forms.RadioButton();
-            this.ogre = new System.Windows.Forms.RadioButton();
             this.classChoice = new System.Windows.Forms.GroupBox();
             this.mage = new System.Windows.Forms.RadioButton();
             this.ranger = new System.Windows.Forms.RadioButton();
             this.warrior = new System.Windows.Forms.RadioButton();
+            this.raceChoice = new System.Windows.Forms.GroupBox();
+            this.elf = new System.Windows.Forms.RadioButton();
+            this.human = new System.Windows.Forms.RadioButton();
+            this.ogre = new System.Windows.Forms.RadioButton();
             this.enter = new System.Windows.Forms.Button();
             this.skill3_CD = new System.Windows.Forms.Label();
             this.skill1_CD = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@ namespace WFG_3
             this.herolvl_label = new System.Windows.Forms.Label();
             this.heroname_label = new System.Windows.Forms.Label();
             this.heroinfo_groupBox = new System.Windows.Forms.GroupBox();
+            this.hero_hit_pb = new System.Windows.Forms.PictureBox();
             this.hero_xp_bar = new System.Windows.Forms.ProgressBar();
             this.heroicon_pictureBox = new System.Windows.Forms.PictureBox();
             this.enemymp_Bar = new System.Windows.Forms.ProgressBar();
@@ -76,12 +77,12 @@ namespace WFG_3
             this.enemyname_label = new System.Windows.Forms.Label();
             this.enemyicon_pictureBox = new System.Windows.Forms.PictureBox();
             this.enemyinfo_groupBox = new System.Windows.Forms.GroupBox();
+            this.enemy_hit_pb = new System.Windows.Forms.PictureBox();
             this.enemy_xp_bar = new System.Windows.Forms.ProgressBar();
             this.herohp_label = new System.Windows.Forms.Label();
             this.heromp_label = new System.Windows.Forms.Label();
             this.enemyhp_label = new System.Windows.Forms.Label();
             this.enemymp_label = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.enemy_turn_timer = new System.Windows.Forms.Timer(this.components);
             this.skip_button = new System.Windows.Forms.Button();
             this.turn_indicator = new System.Windows.Forms.Label();
@@ -116,22 +117,25 @@ namespace WFG_3
             this.hero_lose_timer = new System.Windows.Forms.Timer(this.components);
             this.title_label = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.animation_timer = new System.Windows.Forms.Timer(this.components);
+            this.hero_hit_anim_timer = new System.Windows.Forms.Timer(this.components);
+            this.enemy_hit_anim_timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.nameChoice.SuspendLayout();
-            this.raceChoice.SuspendLayout();
             this.classChoice.SuspendLayout();
+            this.raceChoice.SuspendLayout();
             this.hppotion_Panel.SuspendLayout();
             this.skill2_Panel.SuspendLayout();
             this.skill1_Panel.SuspendLayout();
             this.skill3_Panel.SuspendLayout();
             this.heroinfo_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hero_hit_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroicon_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyicon_pictureBox)).BeginInit();
             this.enemyinfo_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy_hit_pb)).BeginInit();
             this.enemy_skill1_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.enemy_skill1)).BeginInit();
             this.enemy_skill2_panel.SuspendLayout();
@@ -145,7 +149,7 @@ namespace WFG_3
             ((System.ComponentModel.ISupportInitialize)(this.reward_potion_image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reward_image)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -222,8 +226,8 @@ namespace WFG_3
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.nameChoice);
-            this.groupBox1.Controls.Add(this.raceChoice);
             this.groupBox1.Controls.Add(this.classChoice);
+            this.groupBox1.Controls.Add(this.raceChoice);
             this.groupBox1.ForeColor = System.Drawing.Color.Brown;
             this.groupBox1.Location = new System.Drawing.Point(171, 300);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -269,68 +273,6 @@ namespace WFG_3
             this.namebox.Size = new System.Drawing.Size(189, 25);
             this.namebox.TabIndex = 0;
             this.namebox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.namebox_KeyPress);
-            // 
-            // raceChoice
-            // 
-            this.raceChoice.Controls.Add(this.elf);
-            this.raceChoice.Controls.Add(this.human);
-            this.raceChoice.Controls.Add(this.ogre);
-            this.raceChoice.ForeColor = System.Drawing.Color.Brown;
-            this.raceChoice.Location = new System.Drawing.Point(119, 25);
-            this.raceChoice.Name = "raceChoice";
-            this.raceChoice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.raceChoice.Size = new System.Drawing.Size(107, 205);
-            this.raceChoice.TabIndex = 3;
-            this.raceChoice.TabStop = false;
-            this.raceChoice.Text = "Race";
-            // 
-            // elf
-            // 
-            this.elf.Appearance = System.Windows.Forms.Appearance.Button;
-            this.elf.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.elf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.elf.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elf.ForeColor = System.Drawing.Color.Black;
-            this.elf.Location = new System.Drawing.Point(6, 164);
-            this.elf.Name = "elf";
-            this.elf.Size = new System.Drawing.Size(95, 35);
-            this.elf.TabIndex = 5;
-            this.elf.Text = "Elf";
-            this.elf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.elf.UseVisualStyleBackColor = false;
-            this.elf.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            // 
-            // human
-            // 
-            this.human.Appearance = System.Windows.Forms.Appearance.Button;
-            this.human.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.human.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.human.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.human.ForeColor = System.Drawing.Color.Black;
-            this.human.Location = new System.Drawing.Point(6, 96);
-            this.human.Name = "human";
-            this.human.Size = new System.Drawing.Size(95, 35);
-            this.human.TabIndex = 4;
-            this.human.Text = "Human";
-            this.human.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.human.UseVisualStyleBackColor = false;
-            this.human.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
-            // 
-            // ogre
-            // 
-            this.ogre.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ogre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ogre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ogre.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ogre.ForeColor = System.Drawing.Color.Black;
-            this.ogre.Location = new System.Drawing.Point(6, 24);
-            this.ogre.Name = "ogre";
-            this.ogre.Size = new System.Drawing.Size(95, 35);
-            this.ogre.TabIndex = 3;
-            this.ogre.Text = "Ogre";
-            this.ogre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ogre.UseVisualStyleBackColor = false;
-            this.ogre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             // 
             // classChoice
             // 
@@ -393,6 +335,68 @@ namespace WFG_3
             this.warrior.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.warrior.UseVisualStyleBackColor = false;
             this.warrior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
+            // 
+            // raceChoice
+            // 
+            this.raceChoice.Controls.Add(this.elf);
+            this.raceChoice.Controls.Add(this.human);
+            this.raceChoice.Controls.Add(this.ogre);
+            this.raceChoice.ForeColor = System.Drawing.Color.Brown;
+            this.raceChoice.Location = new System.Drawing.Point(119, 25);
+            this.raceChoice.Name = "raceChoice";
+            this.raceChoice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.raceChoice.Size = new System.Drawing.Size(107, 205);
+            this.raceChoice.TabIndex = 3;
+            this.raceChoice.TabStop = false;
+            this.raceChoice.Text = "Race";
+            // 
+            // elf
+            // 
+            this.elf.Appearance = System.Windows.Forms.Appearance.Button;
+            this.elf.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.elf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.elf.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elf.ForeColor = System.Drawing.Color.Black;
+            this.elf.Location = new System.Drawing.Point(6, 164);
+            this.elf.Name = "elf";
+            this.elf.Size = new System.Drawing.Size(95, 35);
+            this.elf.TabIndex = 5;
+            this.elf.Text = "Elf";
+            this.elf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.elf.UseVisualStyleBackColor = false;
+            this.elf.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
+            // 
+            // human
+            // 
+            this.human.Appearance = System.Windows.Forms.Appearance.Button;
+            this.human.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.human.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.human.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.human.ForeColor = System.Drawing.Color.Black;
+            this.human.Location = new System.Drawing.Point(6, 96);
+            this.human.Name = "human";
+            this.human.Size = new System.Drawing.Size(95, 35);
+            this.human.TabIndex = 4;
+            this.human.Text = "Human";
+            this.human.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.human.UseVisualStyleBackColor = false;
+            this.human.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
+            // 
+            // ogre
+            // 
+            this.ogre.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ogre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ogre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ogre.Font = new System.Drawing.Font("NSimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ogre.ForeColor = System.Drawing.Color.Black;
+            this.ogre.Location = new System.Drawing.Point(6, 24);
+            this.ogre.Name = "ogre";
+            this.ogre.Size = new System.Drawing.Size(95, 35);
+            this.ogre.TabIndex = 3;
+            this.ogre.Text = "Ogre";
+            this.ogre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ogre.UseVisualStyleBackColor = false;
+            this.ogre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_MouseDown);
             // 
             // enter
             // 
@@ -593,6 +597,7 @@ namespace WFG_3
             // 
             this.heroinfo_groupBox.BackColor = System.Drawing.Color.Transparent;
             this.heroinfo_groupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.heroinfo_groupBox.Controls.Add(this.hero_hit_pb);
             this.heroinfo_groupBox.Controls.Add(this.hero_xp_bar);
             this.heroinfo_groupBox.Controls.Add(this.herolvl_label);
             this.heroinfo_groupBox.Controls.Add(this.heroname_label);
@@ -606,6 +611,16 @@ namespace WFG_3
             this.heroinfo_groupBox.TabIndex = 23;
             this.heroinfo_groupBox.TabStop = false;
             this.heroinfo_groupBox.Text = "Hero";
+            // 
+            // hero_hit_pb
+            // 
+            this.hero_hit_pb.Image = global::WFG_3.Properties.Resources._1387;
+            this.hero_hit_pb.Location = new System.Drawing.Point(71, 24);
+            this.hero_hit_pb.Name = "hero_hit_pb";
+            this.hero_hit_pb.Size = new System.Drawing.Size(83, 70);
+            this.hero_hit_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hero_hit_pb.TabIndex = 57;
+            this.hero_hit_pb.TabStop = false;
             // 
             // hero_xp_bar
             // 
@@ -679,6 +694,7 @@ namespace WFG_3
             // enemyinfo_groupBox
             // 
             this.enemyinfo_groupBox.BackColor = System.Drawing.Color.Transparent;
+            this.enemyinfo_groupBox.Controls.Add(this.enemy_hit_pb);
             this.enemyinfo_groupBox.Controls.Add(this.enemy_xp_bar);
             this.enemyinfo_groupBox.Controls.Add(this.enemylvl_label);
             this.enemyinfo_groupBox.Controls.Add(this.enemyname_label);
@@ -690,6 +706,16 @@ namespace WFG_3
             this.enemyinfo_groupBox.TabIndex = 20;
             this.enemyinfo_groupBox.TabStop = false;
             this.enemyinfo_groupBox.Text = "Enemy";
+            // 
+            // enemy_hit_pb
+            // 
+            this.enemy_hit_pb.Image = global::WFG_3.Properties.Resources._1387;
+            this.enemy_hit_pb.Location = new System.Drawing.Point(71, 24);
+            this.enemy_hit_pb.Name = "enemy_hit_pb";
+            this.enemy_hit_pb.Size = new System.Drawing.Size(83, 70);
+            this.enemy_hit_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy_hit_pb.TabIndex = 58;
+            this.enemy_hit_pb.TabStop = false;
             // 
             // enemy_xp_bar
             // 
@@ -744,16 +770,6 @@ namespace WFG_3
             this.enemymp_label.Size = new System.Drawing.Size(39, 15);
             this.enemymp_label.TabIndex = 41;
             this.enemymp_label.Text = "Mana";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WFG_3.Properties.Resources.Dungeon_Background_OCWIP_PixelArt;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(783, 566);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
             // 
             // enemy_turn_timer
             // 
@@ -1089,26 +1105,35 @@ namespace WFG_3
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(783, 566);
             this.panel2.TabIndex = 57;
             this.panel2.Visible = false;
             // 
-            // pictureBox2
+            // pictureBox1
             // 
-            this.pictureBox2.Image = global::WFG_3.Properties.Resources.Z0Bl;
-            this.pictureBox2.Location = new System.Drawing.Point(586, 211);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 98);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox1.Image = global::WFG_3.Properties.Resources.Dungeon_Background_OCWIP_PixelArt;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(783, 566);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
             // 
             // animation_timer
             // 
             this.animation_timer.Interval = 1;
             this.animation_timer.Tick += new System.EventHandler(this.animation_timer_Tick);
+            // 
+            // hero_hit_anim_timer
+            // 
+            this.hero_hit_anim_timer.Tick += new System.EventHandler(this.hero_hit_anim_timer_Tick);
+            // 
+            // enemy_hit_anim_timer
+            // 
+            this.enemy_hit_anim_timer.Tick += new System.EventHandler(this.enemy_hit_anim_timer_Tick);
             // 
             // Form1
             // 
@@ -1118,7 +1143,6 @@ namespace WFG_3
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.title_label);
-            this.Controls.Add(this.afterbattle_label);
             this.Controls.Add(this.reward_panel);
             this.Controls.Add(this.enemy_hppotion_counter);
             this.Controls.Add(this.enemy_skill3_CD);
@@ -1128,13 +1152,10 @@ namespace WFG_3
             this.Controls.Add(this.enemy_skill1_CD);
             this.Controls.Add(this.enemy_skill2_panel);
             this.Controls.Add(this.enemy_skill1_panel);
-            this.Controls.Add(this.thrd_event_label);
-            this.Controls.Add(this.scnd_event_label);
             this.Controls.Add(this.turn_indicator);
             this.Controls.Add(this.skip_button);
             this.Controls.Add(this.enemymp_label);
             this.Controls.Add(this.enemyhp_label);
-            this.Controls.Add(this.event_label);
             this.Controls.Add(this.heromp_label);
             this.Controls.Add(this.herohp_label);
             this.Controls.Add(this.skill3_CD);
@@ -1152,12 +1173,15 @@ namespace WFG_3
             this.Controls.Add(this.enemymp_Bar);
             this.Controls.Add(this.enemyhp_Bar);
             this.Controls.Add(this.enemyinfo_groupBox);
-            this.Controls.Add(this.enter);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.event_label);
+            this.Controls.Add(this.afterbattle_label);
+            this.Controls.Add(this.thrd_event_label);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.enter);
+            this.Controls.Add(this.scnd_event_label);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("NSimSun", 11.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1168,19 +1192,20 @@ namespace WFG_3
             this.groupBox1.ResumeLayout(false);
             this.nameChoice.ResumeLayout(false);
             this.nameChoice.PerformLayout();
-            this.raceChoice.ResumeLayout(false);
             this.classChoice.ResumeLayout(false);
+            this.raceChoice.ResumeLayout(false);
             this.hppotion_Panel.ResumeLayout(false);
             this.skill2_Panel.ResumeLayout(false);
             this.skill1_Panel.ResumeLayout(false);
             this.skill3_Panel.ResumeLayout(false);
             this.heroinfo_groupBox.ResumeLayout(false);
             this.heroinfo_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hero_hit_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroicon_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyicon_pictureBox)).EndInit();
             this.enemyinfo_groupBox.ResumeLayout(false);
             this.enemyinfo_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy_hit_pb)).EndInit();
             this.enemy_skill1_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.enemy_skill1)).EndInit();
             this.enemy_skill2_panel.ResumeLayout(false);
@@ -1195,7 +1220,7 @@ namespace WFG_3
             ((System.ComponentModel.ISupportInitialize)(this.reward_potion_image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reward_image)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1250,7 +1275,6 @@ namespace WFG_3
         private System.Windows.Forms.Label heromp_label;
         private System.Windows.Forms.Label enemyhp_label;
         private System.Windows.Forms.Label enemymp_label;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer enemy_turn_timer;
         private System.Windows.Forms.Button skip_button;
         private System.Windows.Forms.Label turn_indicator;
@@ -1289,7 +1313,11 @@ namespace WFG_3
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox heroicon_pictureBox;
         private System.Windows.Forms.Timer animation_timer;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox hero_hit_pb;
+        private System.Windows.Forms.PictureBox enemy_hit_pb;
+        private System.Windows.Forms.Timer hero_hit_anim_timer;
+        private System.Windows.Forms.Timer enemy_hit_anim_timer;
     }
 }
 

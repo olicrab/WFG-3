@@ -63,6 +63,16 @@ namespace WFG_3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1387 {
+            get {
+                object obj = ResourceManager.GetObject("_1387", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _143r {
             get {
                 object obj = ResourceManager.GetObject("_143r", resourceCulture);
@@ -484,6 +494,16 @@ namespace WFG_3.Properties {
         internal static System.Drawing.Bitmap OgreWarriorGood {
             get {
                 object obj = ResourceManager.GetObject("OgreWarriorGood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap picture_compress {
+            get {
+                object obj = ResourceManager.GetObject("picture_compress", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

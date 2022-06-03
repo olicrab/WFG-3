@@ -177,7 +177,6 @@ namespace WFG_3
                     return Itm.caption + "\nDeals '" + ((DamageItem)Itm).dmg.ToString() + "*" + C.PWR.ToString() + "' = '" + (((DamageItem)Itm).dmg * C.PWR) + "' damage.";
                 }
                 
-                //вставлять сюда описание для классов наследников класса Item
 
                 else
                 {
@@ -223,13 +222,6 @@ namespace WFG_3
                 heal = heal0;
             }
 
-            public static bool operator ==(HealItem A, HealItem B) => A.heal == B.heal;
-            public static bool operator !=(HealItem A, HealItem B) => A.heal != B.heal;
-            public static bool operator <(HealItem A, HealItem B) => A.heal < B.heal;
-            public static bool operator >(HealItem A, HealItem B) => A.heal > B.heal;
-            public static bool operator >=(HealItem A, HealItem B) => A.heal >= B.heal;
-            public static bool operator <=(HealItem A, HealItem B) => A.heal <= B.heal;
-
             public int CompareTo(object obj)
             {
                 if (obj is HealItem)
@@ -265,13 +257,6 @@ namespace WFG_3
             {
                 dmg = dmg0;
             }
-
-            public static bool operator ==(DamageItem A, DamageItem B) => A.dmg == B.dmg;
-            public static bool operator !=(DamageItem A, DamageItem B) => A.dmg != B.dmg;
-            public static bool operator <(DamageItem A, DamageItem B) => A.dmg < B.dmg;
-            public static bool operator >(DamageItem A, DamageItem B) => A.dmg > B.dmg;
-            public static bool operator >=(DamageItem A, DamageItem B) => A.dmg >= B.dmg;
-            public static bool operator <=(DamageItem A, DamageItem B) => A.dmg <= B.dmg;
 
             public int CompareTo(object obj)
             {
@@ -1153,6 +1138,7 @@ namespace WFG_3
 
         public int herowinTimeCounter = 0;
         public int herowinCooldown = 20;
+
         public int heroloseTimeCounter = 0;
         public int heroloseCooldown = 20;
 
@@ -1161,6 +1147,12 @@ namespace WFG_3
 
         public int afterbattleTimeCounter = 0;
         public int afterbattleCooldown = 25;
+
+        public int herohitanimTimeCounter = 0;
+        public int herohitanimCooldown = 10;
+
+        public int enemyhitanimTimeCounter = 0;
+        public int enemyhitanimCooldown = 10;
 
         public bool is_turn = true;
         public bool is_win = false;
@@ -1448,7 +1440,6 @@ namespace WFG_3
 
         public void MainLoop()
         {
-            //Рандомная генерация моба
             ENEMY = Mob.randGen(cur_floor);
             is_win = false;
             is_lose = false;
@@ -1535,6 +1526,8 @@ namespace WFG_3
             TTenpotion.SetToolTip(enemy_hppotion, Item.createCaptionByItem(ENEMY.Heal_Potion, ENEMY));
             TTenxpbar.SetToolTip(enemy_xp_bar, ENEMY.GetPercentForNextLvl() + "%");
 
+            enemy_hit_pb.Visible = false;
+            hero_hit_pb.Visible = false;
 
             buttonAnalysis();
             enemyButtonAnalysis();
@@ -1583,7 +1576,6 @@ namespace WFG_3
         }
 
 
-        //объединить две юз функции в одну (добавить параметры sender и victim) (в useSkill избавиться от лишних двух параметров)
         private void useSkill(Item item, Label skill_CD, Button skill_Button)
         {
             if (item is HealPotionItem)
@@ -1643,6 +1635,9 @@ namespace WFG_3
                     ORIG = new Bitmap(PB.Image);
                     is_hit = true;
                     animation_timer.Enabled = true;
+
+                    enemy_hit_pb.Visible = true;
+                    enemy_hit_anim_timer.Enabled = true;
 
                     skill_Button.Enabled = false;
                 }
@@ -1763,6 +1758,9 @@ namespace WFG_3
                     enemymp_label.Text = "Mana: " + ENEMY.MP.ToString() + "/" + ENEMY.max_MP.ToString();
                     skill_CD.Text = item.CD.ToString();
                     skill_picture_box.Image = MakeGrayscale(new Bitmap(skill_picture_box.Image));
+
+                    hero_hit_pb.Visible = true;
+                    hero_hit_anim_timer.Enabled = true;
                 }
             }
             else if (item is HealItem)
@@ -2239,6 +2237,34 @@ namespace WFG_3
             }
 
             PB.Image = TMP;
+        }
+
+        private void hero_hit_anim_timer_Tick(object sender, EventArgs e)
+        {
+            if (enemyhitanimTimeCounter < enemyhitanimCooldown)
+            {
+                enemyhitanimTimeCounter++;
+            }
+            else
+            {
+                enemyhitanimTimeCounter = 0;
+                hero_hit_anim_timer.Enabled = false;
+                hero_hit_pb.Visible = false;
+            }
+        }
+
+        private void enemy_hit_anim_timer_Tick(object sender, EventArgs e)
+        {
+            if (herohitanimTimeCounter < herohitanimCooldown)
+            {
+                herohitanimTimeCounter++;
+            }
+            else
+            {
+                herohitanimTimeCounter = 0;
+                enemy_hit_anim_timer.Enabled = false;
+                enemy_hit_pb.Visible = false;
+            }
         }
     }
 }
